@@ -1,0 +1,3 @@
+{
+    "db": "mongodb://localhost/ivie-movie-app"
+}
