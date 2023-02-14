@@ -1,6 +1,6 @@
 # **iVie**
 
-Project carried out during BeCode's training. Creation of a platform inspired by Netflix, Disney+ and Amazon Prime. We decided to call it Room 237 and dedicated it to horror movies only. We have used the Movie database website API and secure our website with PHP.
+Project carried out during BeCode's training. Creation of a platform inspired by Netflix, Disney+ and Amazon Prime. We have used the Movie database website API and secure our website with Node.js.
 
 ---
 <br>
@@ -13,26 +13,32 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 ### *Collaborators* : 
 
-- Louise Vassart (https://github.com/) **front end**
-- Chloé Halloin (https://github.com/) **front end**
-- Mike Incourt (https://github.com/) **back end**
-- Gregory Creutz (https://github.com/) **back end**
+- [Louise Vassart](https://github.com/louisevst)  **front end**
+- [Chloé Halloin](https://github.com/ChloeHal)  **front end**
+- [Mike Incourt](https://github.com/Vdemike)  **back end**
+- [Gregory Creutz](https://github.com/KaoPollo) **back end**
 
 <br>
 
 **TOOLS** : 
 - Tailwind <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="40" height="40"/>
 </br>
+
 - React <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"/>
 </br>
+
 - Node.js <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40"/>
 </br>
+
 - MongoDB <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" height="40"/>
 </br>
+
 - The Movie Database API 
 </br>
+
 - Notion 
 </br>
+
 - Déploiement?
 </br>
 
