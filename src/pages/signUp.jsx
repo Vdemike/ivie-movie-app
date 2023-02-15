@@ -1,8 +1,12 @@
 import React from "react";
-import SignUpForm from "../Component/SignUpForm/SignUpForm";
+import MultiStepForm from "../Component/MultiStepForm/MultiStepForm";
 
 function SignUp() {
-  return <SignUpForm />;
+  return (
+    <div className="flex justify-center">
+      <MultiStepForm />
+    </div>
+  );
 }
 
 export default SignUp;
