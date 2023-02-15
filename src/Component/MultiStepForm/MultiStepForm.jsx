@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import Success from "./Success";
 import PaymentInfo from "./PaymentInfo";
 import PrivacyPolicy from "./PrivacyPolicy.jsx";
+import logo from "../../assets/logo.svg";
 
 function MultiStepForm() {
   const [page, setPage] = useState(0);
@@ -42,7 +43,12 @@ function MultiStepForm() {
   };
 
   return (
-    <div className="bg-amber-50 m-4 rounded-xl w-full p-2 md:w-1/3">
+    <div className="bg-amber-50 m-4 rounded-xl w-full p-2 md:w-1/3 ">
+      <img
+        src={logo}
+        alt="ivie logo"
+        className="w-1/4 flex justify-center mx-auto my-2"
+      />
       <div className="w-full text-center">
         {page === 0 ? "1/4" : page == 1 ? "2/4" : page == 2 ? "3/4" : "4/4"}
       </div>
