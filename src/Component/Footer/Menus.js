@@ -1,5 +1,8 @@
 export const RESOURCES = [
-  { name: "Legal mention", link: "#" },
+  {
+    name: "Legal mention",
+    link: "#",
+  },
   { name: "Privacy Policy", link: "#" },
   { name: "Terms of Use", link: "#" },
 ];

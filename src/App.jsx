@@ -5,21 +5,27 @@ import Home from "./pages/home";
 
 import SignUp from "./pages/signUp";
 import Footer from "./Component/Footer/footer";
-import Pricing from "./Component/landing/Pricing/Pricing";
 import Login from "./pages/login";
+import { useState } from "react";
 
 function App() {
+  const [color, changeColor] = useState(
+    "linear-gradient(0deg, rgba(175,151,196,1) 0%, rgba(240,224,209,1) 100%)"
+  );
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      <Pricing />
-      <Footer />
-    </Router>
+
+    <div style={{ background: color }}>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
+
   );
 }
 

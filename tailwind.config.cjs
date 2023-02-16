@@ -7,6 +7,10 @@ module.exports = {
         "hero-pattern": "url('./src/assets/cinema.jpg')",
       },
     },
+    fontFamily: {
+      title: ["rowdies"],
+      sans: ["abeezee"],
+    },
   },
   plugins: [],
 };
