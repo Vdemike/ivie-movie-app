@@ -40,12 +40,12 @@ function Navbar() {
         <div
           className={`${
             isMenuOpen
-              ? "w-full absolute right-0 top-11 md:w-auto"
+              ? "z-20 w-full absolute right-0 top-11 md:w-auto"
               : "md:block hidden"
           }`}
           id="navbar-default"
         >
-          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col p-4 mt-4 border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <Link
                 to="/signUp"
