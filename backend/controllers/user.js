@@ -1,6 +1,5 @@
 const User = require('../models/user')
 const {validationResult} = require('express-validator')
-const user = require('../models/user')
 var jwt = require('jsonwebtoken')
 var expressJwt = require('express-jwt')
 
@@ -13,19 +12,30 @@ exports.signup = (req, res) => {
         })
     }
 
-    const user = new User(req.body)
-    user.save((err, user) => {
-        if(err) {
-            return res.status(400).json({
-                err: "Unable to add user"
-            })
-        }
-        return res.json({
-            message: "Success",
-            user
+    const user = new User({
+        email: req.body.email,
+        password: req.body.password,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        pseudo: req.body.pseudo,
+        birthDate: req.body.birthDate,
+        cardOwner: req.body.cardOwner,
+        cardType: req.body.cardType,
+        cardNumber: req.body.cardNumber,
+    });
+
+    user
+        .save(user)
+        .then(data => {
+            res.send(data);
         })
-    })
-}
+        .catch(err => {
+            res.status(500).send({
+                message:
+                err.message || "Some error occured while creating the User"
+            });
+        });
+    };
 
 exports.signin = (req, res) => {
     const {email, password} = req.body

@@ -1,3 +1,4 @@
+
 const express = require('express')
 const { signup, signin, signout } = require('../controllers/user')
 const {check}  = require('express-validator')
@@ -13,4 +14,4 @@ router.get('/signin', signin)
 
 router.get("/signout", signout)
 
-module.exports = router
+module.exports = router;
