@@ -1,10 +1,12 @@
 import React from "react";
-//pour le moment on retourne une simple div mais on peut retourner des composants
+import Hero from "../Component/LandingPage/Hero";
+import Offer from "../Component/LandingPage/Offer";
 function Home() {
   return (
-    <div>
-      <h1>This is the landing page</h1>
-    </div>
+    <>
+      <Hero />
+      <Offer />
+    </>
   );
 }
 
