@@ -2,7 +2,10 @@ import * as React from "react";
 import Navbar from "./Component/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-import SignUP from "./pages/signUp";
+
+import SignUp from "./pages/signUp";
+import Footer from "./Component/Footer/footer";
+import Pricing from "./Component/landing/Pricing/Pricing";
 import Login from "./pages/login";
 
 function App() {
@@ -14,6 +17,8 @@ function App() {
         <Route path="/signUp" element={<SignUP />} />
         <Route path="/login" element={<Login />} />
       </Routes>
+      <Pricing />
+      <Footer />
     </Router>
   );
 }
