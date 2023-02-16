@@ -13,6 +13,7 @@ function App() {
     "linear-gradient(0deg, rgba(175,151,196,1) 0%, rgba(240,224,209,1) 100%)"
   );
   return (
+
     <div style={{ background: color }}>
       <Router>
         <Navbar />
@@ -24,6 +25,7 @@ function App() {
         <Footer />
       </Router>
     </div>
+
   );
 }
 
