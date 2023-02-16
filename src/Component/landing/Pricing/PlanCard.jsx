@@ -12,8 +12,8 @@ export default function PlanCard(props) {
       style={{ backgroundColor: color }}
       className="flex min-h-[428px] w-[320px] flex-col rounded-3xl p-8"
     >
-      <h2 className="mb-5 text-xl font-medium">{name}</h2>
-      <div className="mb-5 flex items-end text-6xl font-black">
+      <h2 className="mb-5 text-xl font-medium ">{name}</h2>
+      <div className="mb-5 flex items-end text-6xl font-black font-title">
         {price ? (
           <>
             <div>${price.toFixed(2)}</div>
