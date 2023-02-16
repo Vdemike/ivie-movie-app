@@ -18,3 +18,19 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   color: black;
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 80s linear infinite;
+}
+
+.hover\:animate-none:hover {
+  animation-play-state: paused;
+}
