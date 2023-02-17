@@ -8,6 +8,7 @@ import Footer from "./Component/Footer/footer";
 import Login from "./pages/login";
 import { useState } from "react";
 import DataService from "./services/services";
+import UserProfile from "./pages/userProfile";
 
 function App() {
   const [color, changeColor] = useState(
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<UserProfile />} />
           </Routes>
         </div>
         <Footer />
