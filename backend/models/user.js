@@ -2,33 +2,71 @@ const mongoose = require("mongoose");
 const crypto = require("crypto");
 const { v4: uuidv4 } = require('uuid');
 const { ObjectId } = mongoose.Schema;
-
 const userSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true,
-      maxlength: 32,
-      trim: true,
-    },
-    lastname: {
-      type: String,
-      maxlength: 32,
-      trim: true,
-    },
     email: {
       type: String,
       required: true,
       maxlength: 32,
       trim: true,
     },
+    encry_password: {
+      type: String,
+      maxlength: 64,
+      trim: true,
+    },
+    firstName: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+    pseudo: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+    birthDate: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+    subscriptions: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+    cardOwner: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+    cardType: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+    cardNumber: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+
     verification_code: {
       type: Number,
       default: null,
-    },
-    encry_password: {
-      type: String,
-      required: true,
     },
     salt: String,
     role: {

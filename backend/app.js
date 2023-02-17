@@ -6,6 +6,9 @@ const axios = require('axios')
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+var corsOptions = {
+  origin: "http://localhost:3000"
+}
 
 require("dotenv").config();
 
@@ -33,7 +36,8 @@ db.once("open", function () {
 // Use parsing middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(corsOptions));
+app.use(bodyParser.urlencoded({ extended: true}));
 
 // routes import
 const userRoutes = require('./routes/user');
@@ -47,6 +51,7 @@ app.use('/signout', signoutRouter);
 
 signinRouter.use(function(req, res, next) {
   console.log('Received sign in request');
+  res.json("Welcome to Sign In");
   next();
 });
 
