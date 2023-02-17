@@ -14,19 +14,22 @@ function App() {
     "linear-gradient(0deg, rgba(175,151,196,1) 0%, rgba(240,224,209,1) 100%)"
   );
   return (
-
-    <div style={{ background: color }}>
+    <div
+      className="min-h-screen m-0 flex flex-col"
+      style={{ background: color }}
+    >
       <Router>
         <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/signUp" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
+        <div className="flex-1">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/signUp" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </div>
         <Footer />
       </Router>
     </div>
-
   );
 }
 

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+const axios = require('axios')
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -103,3 +104,50 @@ const port = 3000
 app.listen(port, () =>{
   console.log(`App is running at ${port}`)
 })
+
+
+
+// Modèle de données Mongoose pour les films
+const movieSchema = new mongoose.Schema({
+  title: String,
+  overview: String,
+  release_date: Date,
+  poster_path: String,
+  vote_average: Number
+});
+
+const Movie = mongoose.model('Movie', movieSchema);
+
+// Récupération des 1000 films les plus populaires à partir de l'API TMDb et enregistrement dans MongoDB
+const api_key = 'd37d3e4ad93eaefbc2c174c17d90eb9d';
+let page = 1;
+const max_page = 10;
+
+const saveMovies = () => {
+  axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=${page}`)
+    .then(response => {
+      const movies = response.data.results;
+
+      movies.forEach(movie => {
+        const newMovie = new Movie({
+          title: movie.title,
+          overview: movie.overview,
+          release_date: movie.release_date,
+          poster_path: movie.poster_path,
+          vote_average: movie.vote_average
+        });
+
+        newMovie.save()
+          .then(() => console.log('Movie saved'))
+          .catch(err => console.log(err));
+      });
+
+      if (page < max_page) {
+        page++;
+        saveMovies();
+      }
+    })
+    .catch(console.error);
+};
+
+saveMovies();

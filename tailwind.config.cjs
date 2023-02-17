@@ -12,5 +12,5 @@ module.exports = {
       sans: ["abeezee"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
