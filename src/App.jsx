@@ -7,6 +7,7 @@ import SignUp from "./pages/signUp";
 import Footer from "./Component/Footer/footer";
 import Login from "./pages/login";
 import { useState } from "react";
+import DataService from "./services/services";
 
 function App() {
   const [color, changeColor] = useState(

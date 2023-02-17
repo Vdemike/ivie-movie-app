@@ -19,6 +19,7 @@ exports.signup = (req, res) => {
         lastName: req.body.lastName,
         pseudo: req.body.pseudo,
         birthDate: req.body.birthDate,
+        subscriptions: req.body.subscriptions,
         cardOwner: req.body.cardOwner,
         cardType: req.body.cardType,
         cardNumber: req.body.cardNumber,

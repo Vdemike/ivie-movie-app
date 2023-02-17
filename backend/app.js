@@ -50,6 +50,7 @@ app.use('/signout', signoutRouter);
 
 signinRouter.use(function(req, res, next) {
   console.log('Received sign in request');
+  res.json("Welcome to Sign In");
   next();
 });
 

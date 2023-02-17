@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SignUpInfo from "./SignUpInfo";
 import Button from "../Button/Button";
 import Success from "./Success";
 import PaymentInfo from "./PaymentInfo";
 import PrivacyPolicy from "./PrivacyPolicy.jsx";
 import logoblack from "../../assets/logoblack.svg";
+import DataService from "../../services/services";
+import axios from "axios";
 
 function MultiStepForm() {
   const [page, setPage] = useState(0);
@@ -23,11 +25,17 @@ function MultiStepForm() {
     dataUse: false,
   });
 
+  useEffect(() => {
+    axios.get('/signUp')
+      .then(response => setFormData(response.data))
+      .catch(error => console.error(error));
+  }, []);
+
   const FormTitles = [
     "Sign up",
     "General terms of sale",
     "Payment details",
-    "Succes",
+    "Success",
   ];
 
   const PageDisplay = () => {

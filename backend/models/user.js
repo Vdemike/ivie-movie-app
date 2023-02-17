@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema(
     },
     encry_password: {
       type: String,
-      maxlength: 32,
+      maxlength: 64,
       trim: true,
     },
     firstName: {
@@ -34,6 +34,12 @@ const userSchema = new mongoose.Schema(
       trim: true,
     },
     birthDate: {
+      type: String,
+      required: true,
+      maxlength: 32,
+      trim: true,
+    },
+    subscriptions: {
       type: String,
       required: true,
       maxlength: 32,
