@@ -3,13 +3,11 @@
 Project carried out during BeCode's training. Creation of a platform inspired by Netflix, Disney+ and Amazon Prime. We have used the Movie database website API and secure our website with Node.js.
 
 ---
-<br>
 
 ### *The project* : 
 
 [Click here to discover the project iVie](https://iVie.com/)
 
-<br>
 
 ### *Collaborators* : 
 
@@ -18,37 +16,20 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 - [Mike Incourt](https://github.com/Vdemike)  **back end**
 - [Gregory Creutz](https://github.com/KaoPollo) **back end**
 
-<br>
 
-**TOOLS** : 
-- Tailwind <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="40" height="40"/>
-</br>
-
-- React <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"/>
-</br>
-
-- Node.js <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40"/>
-</br>
-
-- MongoDB <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" height="40"/>
-</br>
-
-- The Movie Database API 
-</br>
-
-- Notion 
-</br>
-
+### *Tools* :<br>
+ 
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
+- The Movie Database API
 - Déploiement?
-</br>
 
-
-
-<br>
 
 ---
-
-***ACHIEVEMENTS***
+### *Achievements* 
 
 - Create a React/Node.js streaming web-app.
 - A session system: registration, connection / disconnection.
@@ -61,19 +42,18 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 - Manage our onw database system with mongoDB
 - Create a movie page with the info of the selected movie and its trailer
 - Deploy the site
-<br>
 
 
 ---
-<br>
-
-***SOMES PICTURES***
-
----
 
 
-***TASKS ASSIGNMENT***
-<br>
+### *Somes pictures*
+<img width="1440" alt="Capture d’écran 2023-02-17 à 09 24 48" src="https://user-images.githubusercontent.com/119426862/219592031-1a60a71b-d382-4644-8ad6-c1c0fa02a5e8.png">
+<img width="1379" alt="Capture d’écran 2023-02-17 à 09 26 41" src="https://user-images.githubusercontent.com/119426862/219592584-e77a346f-5ff7-40cd-8b20-e417241d7518.png">
+
+
+
+### *Tasks assignment*
 
 - Louise : <br>
 - Chloé : <br>
