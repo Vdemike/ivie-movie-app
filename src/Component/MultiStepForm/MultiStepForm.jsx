@@ -9,7 +9,6 @@ import DataService from "../../services/services";
 import axios from "axios";
 import Password from "./Password";
 
-
 function MultiStepForm() {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
@@ -29,9 +28,10 @@ function MultiStepForm() {
   });
 
   useEffect(() => {
-    axios.get('/signUp')
-      .then(response => setFormData(response.data))
-      .catch(error => console.error(error));
+    axios
+      .get("/signUp")
+      .then((response) => setFormData(response.data))
+      .catch((error) => console.error(error));
   }, []);
 
   const FormTitles = [
@@ -58,7 +58,7 @@ function MultiStepForm() {
 
   return (
     <section className="p-4">
-      <div className="bg-amber-50 rounded-xl w-full p-4 md:w-1/3  flex flex-col justify-center">
+      <div className="bg-amber-50 rounded-xl w-full p-4  flex flex-col justify-center">
         <img src={logoblack} alt="ivie logo" className="w-1/4 mx-auto my-2" />
         <div className="w-full text-center">
           {page === 0
