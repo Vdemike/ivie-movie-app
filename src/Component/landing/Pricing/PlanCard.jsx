@@ -1,12 +1,6 @@
+import RedirectButton from "../../Button/RedirectButton";
 export default function PlanCard(props) {
-  const {
-    name,
-    description,
-    price,
-    features,
-    color,
-    btnText = "start",
-  } = props;
+  const { name, description, price, features, color } = props;
   return (
     <div
       style={{ backgroundColor: color }}
@@ -14,13 +8,7 @@ export default function PlanCard(props) {
     >
       <h2 className="mb-5 text-xl font-medium ">{name}</h2>
       <div className="mb-5 flex items-end text-6xl font-black font-title">
-        {price ? (
-          <>
-            <div>${price.toFixed(2)}</div>
-          </>
-        ) : (
-          "Free"
-        )}
+        {price}
       </div>
       <p className="md-5">{description}</p>
       <ul className="mb-10 flex flex-col gap-y-2">
@@ -42,7 +30,11 @@ export default function PlanCard(props) {
           </li>
         ))}
       </ul>
-      <button>{btnText}</button>
+      <RedirectButton
+        name="Choose"
+        redirect="/signUp"
+        className="bg-black m-1 hover:bg-transparent text-white font-semibold hover:text-black py-2 px-6 border border-transparent hover:border-black rounded text-center"
+      />
     </div>
   );
 }
