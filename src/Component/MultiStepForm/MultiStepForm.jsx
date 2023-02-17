@@ -30,12 +30,8 @@ function MultiStepForm() {
   useEffect(() => {
     axios
       .get("/signUp")
-      .then((response) => {
-        setFormData(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+      .then((response) => setFormData(response.data))
+      .catch((error) => console.error(error));
   }, []);
 
   const FormTitles = [
