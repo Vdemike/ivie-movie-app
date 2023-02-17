@@ -8,6 +8,23 @@ function PaymentInfo({ formData, setFormData }) {
   };
   return (
     <>
+      <label for="subscription-select" className="block text-left mt-4">
+        Choose a subscription:
+      </label>
+
+      <select
+        name="subscriptions"
+        id="subscription-select"
+        className="text-left my-4"
+        onChange={(e) => {
+          setFormData({ ...formData, subscriptions: e.target.value });
+        }}
+      >
+        <option value="">Please choose an option </option>
+        <option value="basic">basic - 7,99€/mois</option>
+        <option value="family">family - 11,99€/mois</option>
+        <option value="generous">generous - 15,99€/mois</option>
+      </select>
       <Input
         type="text"
         name="cardOwner"
