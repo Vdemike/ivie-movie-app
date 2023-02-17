@@ -36,51 +36,6 @@ function SignUpInfo({ formData, setFormData }) {
         value={formData.birthDate}
         onChange={handleInputChange}
       />
-      <Input
-        type="text"
-        name="email"
-        label={"Email"}
-        value={formData.email}
-        onChange={handleInputChange}
-      />
-      <Input
-        type="password"
-        name="password"
-        label={"Password"}
-        value={formData.password}
-        onChange={handleInputChange}
-      />
-      <Input
-        type="password"
-        name="confirmPassword"
-        label={"Confirm your password"}
-        value={formData.confirmPassword}
-        onChange={handleInputChange}
-      />
-      {/* <input
-        type="text"
-        placeholder="Email..."
-        value={formData.email}
-        onChange={(event) =>
-          setFormData({ ...formData, email: event.target.value })
-        }
-      />
-      <input
-        type="text"
-        placeholder="Password..."
-        value={formData.password}
-        onChange={(event) =>
-          setFormData({ ...formData, password: event.target.value })
-        }
-      />
-      <input
-        type="text"
-        placeholder="Confirm Password..."
-        value={formData.confirmPassword}
-        onChange={(event) =>
-          setFormData({ ...formData, confirmPassword: event.target.value })
-        }
-      /> */}
     </div>
   );
 }

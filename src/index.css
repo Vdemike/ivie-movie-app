@@ -123,7 +123,6 @@ select:-webkit-autofill:focus {
   background-color: lime;
 }
 
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -133,7 +132,6 @@ select:-webkit-autofill:focus {
   }
 }
 
-
 .animate-scroll {
   animation: scroll 80s linear infinite;
 }
@@ -141,4 +139,6 @@ select:-webkit-autofill:focus {
 .hover\:animate-none:hover {
   animation-play-state: paused;
 }
-
+body.modal-open {
+  overflow: hidden;
+}
