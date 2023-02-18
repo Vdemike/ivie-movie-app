@@ -3,7 +3,7 @@ import MultiStepForm from "../Component/MultiStepForm/MultiStepForm";
 
 function SignUp() {
   return (
-    <div className="flex justify-center items-center h-full">
+    <div className="py-20 w-full flex justify-center items-center">
       <MultiStepForm />
     </div>
   );

@@ -1,4 +1,4 @@
-import cinema from "../../assets/cinema.jpg";
+import avatar1 from "../../assets/avatar1.svg";
 import React from "react";
 
 function ProfilePic(props) {
@@ -9,7 +9,7 @@ function ProfilePic(props) {
         src={props.profilePicture}
         alt="profile picture"
         onClick={() => {
-          props.handlePictureClick(cinema);
+          props.handlePictureClick(avatar1);
         }}
       />
     </section>
@@ -17,7 +17,7 @@ function ProfilePic(props) {
 }
 
 ProfilePic.defaultProps = {
-  profilePicture: cinema,
+  profilePicture: avatar1,
 };
 
 export default ProfilePic;

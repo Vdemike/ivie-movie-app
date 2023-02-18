@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ProfilePic from "../Component/Profile/ProfilePic";
 import ChangePictureBtn from "../Component/Profile/ChangePictureBtn";
-import cinema from "../assets/cinema.jpg";
+import avatar1 from "../assets/avatar1.svg";
 import ProfileInfo from "../Component/Profile/ProfileInfo";
 function UserProfile() {
-  const [profilePicture, setProfilePicture] = useState(cinema);
+  const [profilePicture, setProfilePicture] = useState(avatar1);
 
   return (
     <>
