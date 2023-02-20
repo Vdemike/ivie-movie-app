@@ -11,12 +11,9 @@ require("dotenv").config();
 
 const User = require('./models/user');
 const movieRoutes = require('./routes/movies');
-
+const saveMovies = require('./tmdb');
 
 const jwt = require('jsonwebtoken');
-
-
-
 
 
 
@@ -34,6 +31,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("DB Connected successfully");
+  saveMovies(1); // Enregistrement des films au démarrage du serveur
 });
 
 
@@ -113,3 +111,8 @@ app.listen(port, () =>{
   console.log(`App is running at ${port}`)
 })
 
+
+app.post('/save-movies', (req, res) => {
+  saveMovies(1); // Lance l'enregistrement des films
+  res.send('Enregistrement des films lancé');
+});
