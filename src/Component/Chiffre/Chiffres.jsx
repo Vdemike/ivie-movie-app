@@ -1,4 +1,19 @@
+import MovieDataService from "../../services/movieService";
+import http from "../../http-common";
+import axios, { Axios } from "axios";
+import { useEffect } from "react";
+
 export default function Chiffres() {
+  useEffect(() => {
+    axios
+      .get("user/movies")
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div className="flex flex-col items-center bg-purple-100 p-4">
       <div className="mb-2 mt-12 text-center">

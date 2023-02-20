@@ -38,7 +38,9 @@ function Dropdown(props) {
           aria-labelledby="accordion-collapse-heading-1"
         >
           <div className="p-2 w-[200px] xs:w-[300px]">
-            <p className="mb-2 p-2 h-40 overflow-y-scroll">{props.text}</p>
+            <p className="mb-2 p-2 h-40 overflow-y-scroll scrollbar-hide">
+              {props.text}
+            </p>
           </div>
         </div>
       )}
