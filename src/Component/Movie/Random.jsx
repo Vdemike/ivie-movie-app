@@ -26,19 +26,23 @@ function Random() {
   };
 
   return (
-    <div>
+    <div className="m-10">
       {movie ? (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center flex-col md:flex-row">
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt={movie.title}
-            className="w-[250px] h-[375px]"
+            className="w-[200px] md:w-[250px] md:h-[375px]"
           />
-          <div className="bg-black p-28 self-center">
+          <div className="bg-black p-10 md:p-20 self-center text-white">
+            <h2 className="font-title text-3xl">Random</h2>
+            <p className="pb-10">
+              Don't waste more time choosing than watching
+            </p>
             <Button
               clickHandler={handleRandomMovie}
-              value="Get Another Random Movie"
-              class="bg-white m-1 hover:bg-transparent text-black font-semibold hover:text-white py-2 px-6 border border-transparent hover:border-white rounded"
+              value="Generate"
+              class="bg-white hover:bg-transparent text-black font-semibold hover:text-white py-2 px-10 border border-transparent hover:border-white rounded flex justify-center items-center m-auto"
             />
           </div>
         </div>
