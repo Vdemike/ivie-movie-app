@@ -12,12 +12,27 @@ var corsOptions = {
 
 require("dotenv").config();
 
+<<<<<<< HEAD
 const user = require("./models/user");
 const User = require("./models/user");
+=======
+const User = require('./models/user');
+const movieRoutes = require('./routes/movies');
+
+>>>>>>> Development
 
 const jwt = require("jsonwebtoken");
 
+<<<<<<< HEAD
 //DB connection
+=======
+
+
+
+
+
+//DB connection 
+>>>>>>> Development
 mongoose.connect(
   `mongodb+srv://ivie:Becode@cluster0.rayo4nz.mongodb.net/Users?retryWrites=true&w=majority`,
   {
@@ -33,21 +48,34 @@ db.once("open", function () {
   console.log("DB Connected successfully");
 });
 
+
+
 // Use parsing middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+
 // routes import
 const userRoutes = require("./routes/user");
 const signinRouter = express.Router();
 const signoutRouter = express.Router();
 
+
+
 // using routes
+<<<<<<< HEAD
 app.use("/api", userRoutes); // = localhost:3000/api/signup
 app.use("/signin", signinRouter);
 app.use("/signout", signoutRouter);
+=======
+app.use('/api', userRoutes); // = localhost:3000/api/signup
+app.use('/signin', signinRouter);
+app.use('/signout', signoutRouter);
+app.use('/movies', movieRoutes);
+>>>>>>> Development
 
 signinRouter.use(function (req, res, next) {
   console.log("Received sign in request");
@@ -97,6 +125,7 @@ signoutRouter.get("/", (req, res, next) => {
 });
 
 // Starting server
+<<<<<<< HEAD
 const port = 3000;
 app.listen(port, () => {
   console.log(`App is running at ${port}`);
@@ -150,3 +179,10 @@ const saveMovies = () => {
 };
 
 saveMovies();
+=======
+const port = 3000
+app.listen(port, () =>{
+  console.log(`App is running at ${port}`)
+})
+
+>>>>>>> Development
