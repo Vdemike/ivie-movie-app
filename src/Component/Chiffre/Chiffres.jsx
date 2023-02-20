@@ -1,14 +1,17 @@
 import MovieDataService from "../../services/movieService";
 import http from "../../http-common";
 import axios, { Axios } from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Chiffres() {
+  const [movies, setMovies] = useState([]);
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/movies/")
       .then((response) => {
-        console.log(response.data.length);
+        console.log(response.data);
+        setMovies(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -36,7 +39,7 @@ export default function Chiffres() {
         </div>
         <div className="flex  flex-col rounded-3xl p-8">
           <h1 className="mb-4 text-7xl font-black text-black font-title text-center">
-            2000
+            {movies.length}
           </h1>
           <p className="text-lg text-black text-center">Movies</p>
         </div>

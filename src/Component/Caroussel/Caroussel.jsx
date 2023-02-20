@@ -21,7 +21,7 @@ function Caroussel() {
         <div className="slide-track">
           {movies.slice(0, 18).map((movie) => (
             <div
-              key={movie.id}
+              key={movie.title}
               className="slide bg-cover"
               style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`,
