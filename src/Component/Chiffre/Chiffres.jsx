@@ -6,9 +6,9 @@ import { useEffect } from "react";
 export default function Chiffres() {
   useEffect(() => {
     axios
-      .get("user/movies")
+      .get("http://localhost:3000/movies/")
       .then((response) => {
-        console.log(response.data);
+        console.log(response.data.length);
       })
       .catch((error) => {
         console.log(error);

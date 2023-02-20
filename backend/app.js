@@ -7,32 +7,20 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 var corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "http://localhost:5173",
 };
 
 require("dotenv").config();
 
-<<<<<<< HEAD
 const user = require("./models/user");
 const User = require("./models/user");
-=======
-const User = require('./models/user');
-const movieRoutes = require('./routes/movies');
-
->>>>>>> Development
+const movieRoutes = require("./routes/movies");
 
 const jwt = require("jsonwebtoken");
 
-<<<<<<< HEAD
 //DB connection
-=======
 
-
-
-
-
-//DB connection 
->>>>>>> Development
+//DB connection
 mongoose.connect(
   `mongodb+srv://ivie:Becode@cluster0.rayo4nz.mongodb.net/Users?retryWrites=true&w=majority`,
   {
@@ -48,34 +36,22 @@ db.once("open", function () {
   console.log("DB Connected successfully");
 });
 
-
-
 // Use parsing middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-
 // routes import
 const userRoutes = require("./routes/user");
 const signinRouter = express.Router();
 const signoutRouter = express.Router();
 
-
-
 // using routes
-<<<<<<< HEAD
 app.use("/api", userRoutes); // = localhost:3000/api/signup
 app.use("/signin", signinRouter);
 app.use("/signout", signoutRouter);
-=======
-app.use('/api', userRoutes); // = localhost:3000/api/signup
-app.use('/signin', signinRouter);
-app.use('/signout', signoutRouter);
-app.use('/movies', movieRoutes);
->>>>>>> Development
+app.use("/movies", movieRoutes);
 
 signinRouter.use(function (req, res, next) {
   console.log("Received sign in request");
@@ -125,64 +101,7 @@ signoutRouter.get("/", (req, res, next) => {
 });
 
 // Starting server
-<<<<<<< HEAD
 const port = 3000;
 app.listen(port, () => {
   console.log(`App is running at ${port}`);
 });
-
-// Modèle de données Mongoose pour les films
-const movieSchema = new mongoose.Schema({
-  title: String,
-  overview: String,
-  release_date: Date,
-  poster_path: String,
-  vote_average: Number,
-});
-
-const Movie = mongoose.model("Movie", movieSchema);
-
-// Récupération des 1000 films les plus populaires à partir de l'API TMDb et enregistrement dans MongoDB
-const api_key = "d37d3e4ad93eaefbc2c174c17d90eb9d";
-let page = 1;
-const max_page = 10;
-
-const saveMovies = () => {
-  axios
-    .get(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=${page}`
-    )
-    .then((response) => {
-      const movies = response.data.results;
-
-      movies.forEach((movie) => {
-        const newMovie = new Movie({
-          title: movie.title,
-          overview: movie.overview,
-          release_date: movie.release_date,
-          poster_path: movie.poster_path,
-          vote_average: movie.vote_average,
-        });
-
-        newMovie
-          .save()
-          .then(() => console.log("Movie saved"))
-          .catch((err) => console.log(err));
-      });
-
-      if (page < max_page) {
-        page++;
-        saveMovies();
-      }
-    })
-    .catch(console.error);
-};
-
-saveMovies();
-=======
-const port = 3000
-app.listen(port, () =>{
-  console.log(`App is running at ${port}`)
-})
-
->>>>>>> Development
