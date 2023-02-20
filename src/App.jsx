@@ -2,7 +2,7 @@ import * as React from "react";
 import Navbar from "./Component/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-
+import Movies from "./pages/movies";
 import SignUp from "./pages/signUp";
 import Footer from "./Component/Footer/footer";
 import Login from "./pages/login";
@@ -27,6 +27,7 @@ function App() {
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<UserProfile />} />
+            <Route path="/movies" element={<Movies />} />
           </Routes>
         </div>
         <Footer />
