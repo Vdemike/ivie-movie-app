@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Button from "../Button/Button";
 
 function Random() {
   const [movie, setMovie] = useState(null);
@@ -27,15 +28,19 @@ function Random() {
   return (
     <div>
       {movie ? (
-        <div>
+        <div className="flex justify-center items-center">
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt={movie.title}
             className="w-[250px] h-[375px]"
           />
-          <h1>{movie.title}</h1>
-          <p>{movie.overview}</p>
-          <button onClick={handleRandomMovie}>Get Another Random Movie</button>
+          <div className="bg-black p-28 self-center">
+            <Button
+              clickHandler={handleRandomMovie}
+              value="Get Another Random Movie"
+              class="bg-white m-1 hover:bg-transparent text-black font-semibold hover:text-white py-2 px-6 border border-transparent hover:border-white rounded"
+            />
+          </div>
         </div>
       ) : (
         <p>Loading...</p>

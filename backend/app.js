@@ -12,27 +12,14 @@ var corsOptions = {
 
 require("dotenv").config();
 
-<<<<<<< HEAD
-const user = require("./models/user");
+const jwt = require("jsonwebtoken");
 const User = require("./models/user");
 const movieRoutes = require("./routes/movies");
-
-const jwt = require("jsonwebtoken");
-=======
-const User = require('./models/user');
-const movieRoutes = require('./routes/movies');
-const saveMovies = require('./tmdb');
->>>>>>> Development
+const saveMovies = require("./tmdb");
 
 //DB connection
 
-<<<<<<< HEAD
 //DB connection
-=======
-
-
-//DB connection 
->>>>>>> Development
 mongoose.connect(
   `mongodb+srv://ivie:Becode@cluster0.rayo4nz.mongodb.net/Users?retryWrites=true&w=majority`,
   {
@@ -114,19 +101,12 @@ signoutRouter.get("/", (req, res, next) => {
 });
 
 // Starting server
-<<<<<<< HEAD
 const port = 3000;
 app.listen(port, () => {
   console.log(`App is running at ${port}`);
-=======
-const port = 3000
-app.listen(port, () =>{
-  console.log(`App is running at ${port}`)
-})
+});
 
-
-app.post('/save-movies', (req, res) => {
+app.post("/save-movies", (req, res) => {
   saveMovies(1); // Lance l'enregistrement des films
-  res.send('Enregistrement des films lancé');
->>>>>>> Development
+  res.send("Enregistrement des films lancé");
 });
