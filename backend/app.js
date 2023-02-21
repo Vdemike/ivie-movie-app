@@ -51,8 +51,8 @@ const signoutRouter = express.Router();
 // Signup
 
 
-app.post("/register", async (req, res) => {
-  const { firstname, lastname, pseudo, birthDate } = req.body;
+app.post("/api/signup", async (req, res) => {
+  const { firstName, lastName, pseudo, birthDate } = req.body;
 
   const encryptedPassword = await bcrypt.hash(password, 10);
   try {
@@ -127,7 +127,7 @@ signoutRouter.get("/", (req, res, next) => {
 });
 
 // Starting server
-const port = 5173;
+const port = 3000;
 app.listen(port, () => {
   console.log(`App is running at ${port}`);
 });

@@ -31,7 +31,7 @@ function MultiStepForm() {
 
   useEffect(() => {
     axios
-      .post("/api/signup")
+      .post("http://localhost:3000/api/signup")
       .then((response) => setFormData(response.data))
       .catch((error) => console.error(error));
   }, []);

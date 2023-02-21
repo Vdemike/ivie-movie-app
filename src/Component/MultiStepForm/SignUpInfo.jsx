@@ -9,8 +9,8 @@ function SignUpInfo({ formData, setFormData }) {
 
   const handleSubmit = (e) => {
 
-      console.log(fname, lname, pseudo, birthDate);
-      fetch("localhost:3000/api/signup", {
+      console.log(firstName, lastName, pseudo, birthDate);
+      fetch("http://localhost:3000/api/signup", {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -19,9 +19,9 @@ function SignUpInfo({ formData, setFormData }) {
           "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
-          firstname,
+          firstName,
           pseudo,
-          lastname,
+          lastName,
           birthDate,
         }),
       })
@@ -68,6 +68,7 @@ function SignUpInfo({ formData, setFormData }) {
         onChange={handleInputChange}
       />
       </form>
+      
     </div>
   );
 }
