@@ -24,7 +24,6 @@ export default function Chiffres() {
       }
     });
   });
-
   return (
     <div className="flex flex-col items-center bg-purple-100 p-4">
       <div className="mb-2 mt-12 text-center">
