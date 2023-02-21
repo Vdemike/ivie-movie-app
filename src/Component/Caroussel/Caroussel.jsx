@@ -19,7 +19,7 @@ function Caroussel() {
     <section className="slider-container">
       <div className="slider">
         <div className="slide-track">
-          {movies.slice(0, 18).map((movie) => (
+          {movies.slice(0, 17).map((movie) => (
             <div
               key={movie.title}
               className="slide bg-cover"
