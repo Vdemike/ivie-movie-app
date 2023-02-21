@@ -15,13 +15,13 @@ const userSchema = new mongoose.Schema(
       maxlength: 64,
       trim: true,
     },
-    firstName: {
+    fname: {
       type: String,
       required: true,
       maxlength: 32,
       trim: true,
     },
-    lastName: {
+    lname: {
       type: String,
       required: true,
       maxlength: 32,
@@ -74,8 +74,8 @@ const userSchema = new mongoose.Schema(
       default: 0,
     },
   },
-  { timestamps: true }
-);
+  { timestamps: true }, {collection: "UserInfo", }
+) ;
 
 userSchema
   .virtual("password")
@@ -103,7 +103,7 @@ userSchema.methods = {
     } catch (err) {
       return "";
     }
-  },
+  }, 
 };
 
 module.exports = mongoose.model("User", userSchema);

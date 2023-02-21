@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
-const axios = require("axios");
+const bcrypt = require("bcryptjs");
+app.set("view engine", "ejs");
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -46,6 +47,31 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const userRoutes = require("./routes/user");
 const signinRouter = express.Router();
 const signoutRouter = express.Router();
+
+// Signup
+
+
+app.post("/register", async (req, res) => {
+  const { firstname, lastname, pseudo, birthDate } = req.body;
+
+  const encryptedPassword = await bcrypt.hash(password, 10);
+  try {
+    const oldUser = await User.findOne({ email });
+
+    if (oldUser) {
+      return res.json({ error: "User Exists" });
+    }
+    await User.create({
+      firstname,
+      lastname,
+      pseudo,
+      birthDate,
+    });
+    res.send({ status: "ok" });
+  } catch (error) {
+    res.send({ status: "error" });
+  }
+});
 
 // using routes
 app.use("/api", userRoutes); // = localhost:3000/api/signup
@@ -101,7 +127,7 @@ signoutRouter.get("/", (req, res, next) => {
 });
 
 // Starting server
-const port = 3000;
+const port = 5173;
 app.listen(port, () => {
   console.log(`App is running at ${port}`);
 });
