@@ -3,7 +3,7 @@ import LoginForm from "../Component/Login/LoginForm";
 
 function Login() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="py-20 flex justify-center w-full items-center md:h-[calc(100vh-18rem)]">
       <LoginForm />
     </div>
   );

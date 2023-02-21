@@ -5,44 +5,40 @@ function Dropdown(props) {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+    console.log(isOpen);
   };
 
   return (
-    <div className="w-full text-left p-2">
-      <button
-        type="button"
-        className="text-white bg-purple-500 hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
-        id="dropdownDefaultButton"
-        onClick={toggleDropdown}
-      >
-        {props.title}
-        <svg
-          className="w-4 h-4 ml-2"
-          aria-hidden="true"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+    <div className="container">
+      <h2 id="accordion-collapse-heading-1">
+        <button
+          type="button"
+          className="flex items-start justify-between w-[200px] xs:w-[300px] p-2 font-medium text-left text-gray-500 rounded-t-xl"
+          onClick={toggleDropdown}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          ></path>
-        </svg>
-      </button>
-
+          <span>{props.title}</span>
+          <svg
+            data-accordion-icon
+            className="w-6 h-6 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </h2>
       {isOpen && (
         <div
-          className="z-20 origin-top-right absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="dropdownDefaultButton"
-          tabIndex="-1"
+          id="accordion-collapse-body-1"
+          aria-labelledby="accordion-collapse-heading-1"
         >
-          <div className="py-1" role="none">
-            <p className="h-32 overflow-y-scroll block px-4 py-2 text-sm">
+          <div className="p-2 w-[200px] xs:w-[300px]">
+            <p className="mb-2 p-2 h-40 overflow-y-scroll scrollbar-hide">
               {props.text}
             </p>
           </div>

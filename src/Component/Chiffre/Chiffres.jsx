@@ -1,4 +1,30 @@
+import MovieDataService from "../../services/movieService";
+import http from "../../http-common";
+import axios, { Axios } from "axios";
+import { useEffect, useState } from "react";
+
 export default function Chiffres() {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/movies/")
+      .then((response) => {
+        setMovies(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  let categories = [];
+  movies.forEach((element) => {
+    element.category.map((movie) => {
+      if (!categories.includes(movie)) {
+        categories.push(movie);
+      }
+    });
+  });
+
   return (
     <div className="flex flex-col items-center bg-purple-100 p-4">
       <div className="mb-2 mt-12 text-center">
@@ -21,13 +47,13 @@ export default function Chiffres() {
         </div>
         <div className="flex  flex-col rounded-3xl p-8">
           <h1 className="mb-4 text-7xl font-black text-black font-title text-center">
-            2000
+            {movies.length}
           </h1>
           <p className="text-lg text-black text-center">Movies</p>
         </div>
         <div className="flex  flex-col rounded-3xl p-8">
           <h1 className="mb-4 text-7xl font-black text-black font-title text-center">
-            20
+            {categories.length}
           </h1>
           <p className="text-lg text-black text-center">Categories</p>
         </div>
