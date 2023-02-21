@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('./src/assets/cinema.jpg')",
       },
+      screens: {
+        xs: "350px",
+      },
     },
     fontFamily: {
       title: ["rowdies"],

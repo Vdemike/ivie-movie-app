@@ -57,8 +57,8 @@ function MultiStepForm() {
   };
 
   return (
-    <section className="p-4">
-      <div className="bg-amber-50 rounded-xl w-full p-4  flex flex-col justify-center">
+    <section>
+      <div className="bg-amber-50 m-auto rounded-xl w-full p-4 h-full">
         <img src={logoblack} alt="ivie logo" className="w-1/4 mx-auto my-2" />
         <div className="w-full text-center">
           {page === 0
@@ -71,11 +71,11 @@ function MultiStepForm() {
             ? "4/4"
             : ""}
         </div>
-        <div className="form-container">
+        <div className="container">
           <div className="text-center">
             <h1>{FormTitles[page]}</h1>
           </div>
-          <div className="body">{PageDisplay()}</div>
+          <div>{PageDisplay()}</div>
           <div className="flex justify-center">
             <Button
               hide={page === 4 ? true : false}

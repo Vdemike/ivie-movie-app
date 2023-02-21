@@ -30,7 +30,7 @@ select:-webkit-autofill:focus {
 
 .slider {
   background: black;
-  height: 250px;
+  height: 375px;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -74,7 +74,7 @@ select:-webkit-autofill:focus {
 }
 
 .slider .slide {
-  height: 250px;
+  height: 375px;
   width: 250px;
 }
 
@@ -85,7 +85,7 @@ select:-webkit-autofill:focus {
 
 .slide:nth-child(2),
 .slide:nth-child(11) {
-  background-color: coral;
+  background-color: rgb(255, 127, 80);
 }
 
 .slide:nth-child(3),

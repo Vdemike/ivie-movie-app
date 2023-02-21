@@ -6,24 +6,141 @@ function PrivacyPolicy({ formData, setFormData }) {
     <div className="p-4">
       <Dropdown
         title="Privacy policy"
-        text="Acceptance of Terms: Explain that by using the iVie website or app, users agree to the terms and conditions, and that the agreement constitutes a binding contract between the user and the company.
-
-              User Conduct: Outline the prohibited uses of the service, including but not limited to copyright infringement, hacking, harassment, and fraud.
-
-              Payment and Billing: Explain the fees and billing policies for the service, including any free trial periods and automatic renewals. Include information on how users can cancel their subscription and obtain refunds.
-
-              Content Licensing and Intellectual Property: Explain that the content provided on iVie is licensed, and not owned by the user. Include information on how the content may be used, and any restrictions on copying or sharing content.Disclaimers: Explain that the iVie service is provided 'as is' and that the company makes no guarantees as to the quality or availability of the service. Include any disclaimers or limitations of liability that are required by law.
-
-              Privacy and Data Use: Explain how user data is collected, used, and shared by iVie. Include information on how users can access, update, or delete their data.
-
-              Governing Law and Dispute Resolution: Explain which jurisdiction's laws govern the agreement, and how disputes will be resolved between users and iVie."
+        text={
+          <div>
+            {" "}
+            <br />
+            This privacy policy governs the manner in which iVie collects, uses,
+            maintains, and discloses information collected from users (each, a
+            "User") of the iVie website (the "Site"). This privacy policy
+            applies to the Site and all products and services offered by iVie.
+            <br />
+            <br />
+            <h4 className="text-lg font-title">
+              Personal identification information
+            </h4>
+            <br /> We may collect personal identification information from Users
+            in a variety of ways, including, but not limited to, when Users
+            visit our site, register on the site, place an order, fill out a
+            form, and in connection with other activities, services, features,
+            or resources we make available on our Site. Users may be asked for,
+            as appropriate, name, email address, mailing address, phone number,
+            credit card information. Users may, however, visit our Site
+            anonymously. We will collect personal identification information
+            from Users only if they voluntarily submit such information to us.
+            Users can always refuse to supply personal identification
+            information, except that it may prevent them from engaging in
+            certain Site-related activities.
+            <br />
+            <br />
+            <h4 className="text-lg font-title">
+              Non-personal identification information
+            </h4>
+            <br /> We may collect non-personal identification information about
+            Users whenever they interact with our Site. Non-personal
+            identification information may include the browser name, the type of
+            computer, and technical information about Users' means of connection
+            to our Site, such as the operating system and the Internet service
+            providers utilized and other similar information. Web browser
+            cookies Our Site may use "cookies" to enhance User experience.
+            Users' web browsers place cookies on their hard drive for
+            record-keeping purposes and sometimes to track information about
+            them. Users may choose to set their web browser to refuse cookies or
+            to alert them when cookies are being sent. If they do so, note that
+            some parts of the Site may not function properly. <br />
+            <br />
+            <h4 className="text-lg font-title">
+              How we use collected information
+            </h4>
+            <br /> iVie may collect and use Users' personal identification
+            information for the following purposes:
+            <br />
+            <br />
+            <ul className="list-disc">
+              <li>
+                To process payments: We may use the information Users provide
+                about themselves when placing an order only to provide service
+                to that order. We do not share this information with outside
+                parties except to the extent necessary to provide the service.
+              </li>
+              <br />
+              <li>
+                To improve customer service: Information Users provide helps us
+                respond to customer service requests and support needs more
+                efficiently. To personalize user experience: We may use
+                information in the aggregate to understand how our Users as a
+                group use the services and resources provided on our Site.
+              </li>
+              <br />
+              <li>
+                To improve our Site: We may use feedback Users provide to
+                improve our products and services.
+              </li>
+              <br />
+              <li>
+                To send periodic emails: We may use the email address to send
+                User information and updates pertaining to their order. It may
+                also be used to respond to their inquiries, questions, and/or
+                other requests. If User decides to opt-in to our mailing list,
+                they will receive emails that may include company news, updates,
+                related product or service information, etc. If at any time the
+                User would like to unsubscribe from receiving future emails, we
+                include detailed unsubscribe instructions at the bottom of each
+                email.
+              </li>
+            </ul>
+            <br />
+          </div>
+        }
       />
       <Dropdown
         title="Data use policy"
-        text="Data Collection: We may collect certain personal information from users, including but not limited to their name, email address, and payment information. We may also collect non-personal information such as device type, IP address, and browsing history.
-              Data Use: We use this information to provide our services to users, including but not limited to processing payments, recommending content, and personalizing the user experience. We may also use this information for research and analytics purposes.
-              Data Sharing: We do not sell or rent user data to third parties. We may share user data with our trusted partners and service providers to help us provide our services. We may also share user data in response to a legal request or to protect our rights or the rights of others.
-              Data Storage: User data is stored on secure servers and is protected using industry-standard encryption and security protocols."
+        text={
+          <>
+            <h4 className="text-lg font-title">Data Collection:</h4>
+            <br />
+            <p>
+              We may collect certain personal information from users, including
+              but not limited to their name, email address, and payment
+              information.
+            </p>
+            <p>
+              We may also collect non-personal information such as device type,
+              IP address, and browsing history.
+            </p>
+            <br />
+            <h4 className="text-lg font-title">Data Use:</h4>
+            <br />
+            <p>
+              We use this information to provide our services to users,
+              including but not limited to processing payments, recommending
+              content, and personalizing the user experience.
+            </p>
+            <p>
+              We may also use this information for research and analytics
+              purposes.
+            </p>
+            <br />
+            <h4 className="text-lg font-title">Data Sharing: </h4>
+            <br />
+            <p>
+              We do not sell or rent user data to third parties. We may share
+              user data with our trusted partners and service providers to help
+              us provide our services.
+            </p>
+            <p>
+              We may also share user data in response to a legal request or to
+              protect our rights or the rights of others.
+            </p>
+            <br />
+            <h4 className="text-lg font-title">Data Storage:</h4>
+            <br />
+            <p>
+              User data is stored on secure servers and is protected using
+              industry-standard encryption and security protocols.
+            </p>
+          </>
+        }
       />
       <div>
         <input

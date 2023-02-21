@@ -14,9 +14,9 @@ function Modal({ isOpen, toggleModal, children, title }) {
     };
   }, [isOpen]);
   return (
-    <div className="bg-gray-800 fixed top-0 left-0 right-0 z-50 p-8 m-4 rounded-xl shadow-lg scrollbar-hide overflow-x-hidden md:inset-0 h-full overflow-y-scroll md:w-3/4 lg:w-1/2 md:m-auto md:h-3/4 max-h-[95%]">
+    <div className="bg-white text-black fixed border-[20px] border-white pr-6 pt-6 top-0 left-0 right-0 z-50 m-4 rounded-xl shadow-lg scrollbar-hide overflow-x-hidden md:inset-0 h-full overflow-y-scroll md:w-3/4 lg:w-1/2 md:m-auto md:h-3/4 max-h-[95%] lg:pr-12">
       <button
-        className="fixed top-5 right-5  md:top-[15%] md:right-[15%] lg:right-[28%] p-2"
+        className="fixed top-5 right-5  md:top-[15%] md:right-[15%] lg:right-[26%] p-2"
         onClick={toggleModal}
       >
         <svg
@@ -25,7 +25,7 @@ function Modal({ isOpen, toggleModal, children, title }) {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 md:h-10 md:w-10"
+          className="w-8 h-8 md:h-10 md:w-10"
         >
           <path
             strokeLinecap="round"
@@ -34,8 +34,8 @@ function Modal({ isOpen, toggleModal, children, title }) {
           />
         </svg>
       </button>
-      <div className="text-left relative m-auto w-full h-full max-w-md md:mx-auto">
-        <h3 className="py-2 font-title text-xl">{title}</h3>
+      <div className="text-left p-4 md:p-6 w-full h-full md:mx-auto">
+        <h3 className=" font-title text-xl">{title}</h3>
         {children}
       </div>
     </div>

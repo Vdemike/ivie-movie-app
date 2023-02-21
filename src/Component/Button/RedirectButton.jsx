@@ -6,7 +6,7 @@ function RedirectButton(props) {
       to={props.redirect}
       className={
         props.className ||
-        "bg-purple-400 m-1 hover:bg-transparent text-white font-semibold hover:text-purple-400 py-2 px-6 border border-transparent hover:border-purple-400 rounded"
+        "bg-[#9975B6] m-1 hover:bg-transparent text-[#F4E3D7] font-semibold hover:text-[#9975B6] py-2 px-6 border border-transparent hover:border-[#9975B6] rounded"
       }
     >
       {props.name}
