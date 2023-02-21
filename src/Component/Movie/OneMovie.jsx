@@ -8,7 +8,7 @@ function OneMovie(props) {
         className="h-[400px] md:h-[500px] lg:h-[calc(100vh-112px)]"
       />
       <div className="md:p-20 bg-white lg:ml-10 p-4">
-        <h1 className="font-title text-2xl text-center p-4">{props.title}</h1>
+        <h1 className="font-title text-3xl text-center p-4">{props.title}</h1>
         <p className="py-2">
           Release date: {props.date.substr(8, 2)}/{props.date.substr(5, 2)}/
           {props.date.substr(0, 4)}
@@ -21,6 +21,7 @@ function OneMovie(props) {
             </p>
           ))}
         </p>
+        <p className="py-2">Rating: {props.rating}</p>
         <p className="py-4 pb-8">{props.overview}</p>
         <Button
           clickHandler={props.onClose}

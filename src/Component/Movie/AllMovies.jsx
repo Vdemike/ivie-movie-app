@@ -61,6 +61,7 @@ function AllMovies() {
           poster={selectedMovie.poster_path}
           date={selectedMovie.release_date}
           category={selectedMovie.category}
+          rating={selectedMovie.vote_average}
         />
       ) : (
         <>

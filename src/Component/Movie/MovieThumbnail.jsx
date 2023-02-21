@@ -1,7 +1,4 @@
-import OneMovie from "./OneMovie";
-import { useState } from "react";
 function MovieThumbnail(props) {
-  const [oneMovie, setOneMovies] = useState(false);
   return (
     <>
       <div className="relative m-4" onClick={props.handleClick}>
