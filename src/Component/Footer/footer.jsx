@@ -19,7 +19,7 @@ function Footer() {
     setIsModal3Visible((prevIsModal3Visible) => !prevIsModal3Visible);
   };
   return (
-    <div className="main-footer mr-0 bg-black w-full text-white">
+    <div className="main-footer mr-0 bg-black w-full text-[#F4E3D7]">
       <div className="w-full py-8">
         <div className="grid grid-cols-1 mr-0 sm:grid-cols-3 gap-8 text-center">
           {/* Column1 */}
@@ -63,7 +63,7 @@ function Footer() {
 
                   <div>
                     <svg
-                      class="h-6 w-6 fill-current text-white"
+                      class="h-6 w-6 fill-current text-[#F4E3D7]"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
                     >

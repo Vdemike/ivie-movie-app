@@ -1,7 +1,7 @@
 import PlanCard from "./PlanCard";
 export default function Pricing() {
   return (
-    <div className="flex flex-col items-center bg-amber-100 p-4">
+    <div className="flex flex-col items-center bg-[#F4E3D7] p-4">
       <div className="mb-2 mt-12 text-center">
         <h1 className="mb-4 text-7xl font-black text-black font-title">
           Pricing

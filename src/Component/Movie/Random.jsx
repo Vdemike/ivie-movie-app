@@ -47,7 +47,9 @@ function Random() {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="w-full h-screen flex justify-center items-center bg-black/80 z-10">
+          <div className="w-[64px] h-[64px] rounded-full border-y-2 animate-spin"></div>
+        </div>
       )}
     </div>
   );
