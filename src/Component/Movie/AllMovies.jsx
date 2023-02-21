@@ -38,36 +38,14 @@ function AllMovies() {
     }
   };
 
-  const categories = [
-    "All",
-    "Action",
-    "Adventure",
-    "Science Fiction",
-    "Thriller",
-    "Romance",
-    "Comedy",
-    "Crime",
-    "Drama",
-    "Horror",
-    "Mystery",
-    "Animation",
-    "Family",
-    "Fantasy",
-    "War",
-    "History",
-    "Music",
-    "TV Movie",
-    "Documentary",
-    "Western",
-  ];
-  // movies.forEach((element) => {
-  //   element.category.map((movie) => {
-  //     if (!categories.includes(movie)) {
-  //       categories.push(movie);
-  //     }
-  //   });
-  // });
-  // console.log(categories);
+  const categories = ["All"];
+  allMovies.forEach((element) => {
+    element.category.map((movie) => {
+      if (!categories.includes(movie)) {
+        categories.push(movie);
+      }
+    });
+  });
 
   const moviesToDisplay = movies.slice(0, moviesToShow);
 
@@ -91,7 +69,7 @@ function AllMovies() {
         {moviesToDisplay.map((movie) => (
           <>
             <MovieThumbnail
-              key={movie._id}
+              id={movie._id}
               poster={movie.poster_path}
               title={movie.title}
               date={movie.release_date}
