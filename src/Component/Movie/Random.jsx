@@ -29,12 +29,21 @@ function Random() {
     <div className="m-10">
       {movie ? (
         <div className="flex justify-center items-center flex-col md:flex-row">
-          <img
-            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            alt={movie.title}
-            className="w-[200px] md:w-[250px] md:h-[375px]"
-          />
-          <div className="bg-black p-10 md:p-20 self-center text-[#F4E3D7]">
+          <div className="relative">
+            <img
+              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              alt={movie.title}
+              className="w-[200px] md:w-[250px] md:h-[375px]"
+            />
+            <div
+              className="bg-black/80 absolute bottom-0 text-white h-full w-[200px] md:w-[250px]
+        opacity-0 transition-opacity hover:opacity-100 flex justify-end items-center flex-col text-center"
+            >
+              <p> {movie.title}</p>
+              <p> {movie.release_date.split("-").shift()}</p>
+            </div>
+          </div>
+          <div className="bg-black p-10 md:p-20 self-center text-white">
             <h2 className="font-title text-3xl">Random</h2>
             <p className="pb-10">
               Don't waste more time choosing than watching
