@@ -33,7 +33,7 @@ export default function PlanCard(props) {
       <RedirectButton
         name="Choose"
         redirect="/signUp"
-        className="bg-black m-1 hover:bg-transparent text-white font-semibold hover:text-black py-2 px-6 border border-transparent hover:border-black rounded text-center"
+        className="bg-black m-1 hover:bg-transparent text-[#F4E3D7] font-semibold hover:text-black py-2 px-6 border border-transparent hover:border-black rounded text-center"
       />
     </div>
   );
