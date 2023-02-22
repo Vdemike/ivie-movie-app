@@ -67,6 +67,7 @@ function SignUpInfo({ formData, setFormData }) {
         value={formData.birthDate}
         onChange={handleInputChange}
       />
+      <button type="submit">Submit</button>
       </form>
     </div>
   );
