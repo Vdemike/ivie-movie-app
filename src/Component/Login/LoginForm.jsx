@@ -33,6 +33,7 @@ function LoginForm() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "user")});
+
   };
 
   return (

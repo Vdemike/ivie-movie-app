@@ -76,6 +76,7 @@ signinRouter.post("/", (req, res, next) => {
     //Put token in cookie
     res.cookie("token", token, { expire: new Date() + 1 });
 
+    console.log("User logged in");
     //Send response to front end
     const { _id, name, email } = user;
     return res.json({
