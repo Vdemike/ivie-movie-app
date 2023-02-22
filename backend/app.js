@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
-const bcrypt = require("bcryptjs");
 app.set("view engine", "ejs");
 
 const bodyParser = require("body-parser");
