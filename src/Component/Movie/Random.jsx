@@ -52,7 +52,7 @@ function Random() {
                 setSelectedMovie(movie);
               }}
               className="bg-black/80 absolute bottom-0 text-white h-full w-[200px] md:w-[250px]
-        opacity-0 transition-opacity hover:opacity-100 flex justify-end items-center flex-col text-center cursor-pointer"
+        opacity-0 transition-opacity hover:opacity-100 flex justify-end items-center flex-col text-center cursor-pointer p-4"
             >
               <p> {movie.title}</p>
               <p> {movie.release_date.split("-").shift()}</p>
