@@ -47,47 +47,11 @@ const userRoutes = require("./routes/user");
 const signinRouter = express.Router();
 const signoutRouter = express.Router();
 
-// // Signup
-
-
-// app.post("http://localhost:3000/api/signup", async (req, res) => {
-//   const { email, password, firstName, lastName, pseudo, birthDate, subscriptions, cardOwner, cardType, cardNumber } = req.body;
-
-//   try {
-//     const oldUser = await User.findOne({ email });
-
-//     if (oldUser) {
-//       return res.json({ error: "User Exists" });
-//     }
-//     await User.create({
-//       email,
-//       password,
-//       firstName,
-//       lastName,
-//       pseudo,
-//       birthDate,
-//       subscriptions,
-//       cardOwner,
-//       cardType,
-//       cardNumber,
-//     });
-//     res.send({ status: "ok" });
-//   } catch (error) {
-//     res.send({ status: "error" });
-//   }
-// });
-
 // using routes
 app.use("/api", userRoutes); // = localhost:3000/api/signup
 app.use("/signin", signinRouter);
 app.use("/signout", signoutRouter);
 app.use("/movies", movieRoutes);
-
-signinRouter.use(function (req, res, next) {
-  console.log("Received sign in request");
-  res.json("Welcome to Sign In");
-  next();
-});
 
 signinRouter.post("/", (req, res, next) => {
   const { email, password } = req.body;
@@ -112,6 +76,7 @@ signinRouter.post("/", (req, res, next) => {
     //Put token in cookie
     res.cookie("token", token, { expire: new Date() + 1 });
 
+    console.log("User logged in");
     //Send response to front end
     const { _id, name, email } = user;
     return res.json({
