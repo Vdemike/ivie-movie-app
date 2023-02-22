@@ -78,51 +78,6 @@ select:-webkit-autofill:focus {
   width: 250px;
 }
 
-.slide:nth-child(1),
-.slide:nth-child(10) {
-  background-color: yellow;
-}
-
-.slide:nth-child(2),
-.slide:nth-child(11) {
-  background-color: rgb(255, 127, 80);
-}
-
-.slide:nth-child(3),
-.slide:nth-child(12) {
-  background-color: blue;
-}
-
-.slide:nth-child(4),
-.slide:nth-child(13) {
-  background-color: red;
-}
-
-.slide:nth-child(5),
-.slide:nth-child(14) {
-  background-color: orange;
-}
-
-.slide:nth-child(6),
-.slide:nth-child(15) {
-  background-color: purple;
-}
-
-.slide:nth-child(7),
-.slide:nth-child(16) {
-  background-color: pink;
-}
-
-.slide:nth-child(8),
-.slide:nth-child(17) {
-  background-color: navy;
-}
-
-.slide:nth-child(9),
-.slide:nth-child(18) {
-  background-color: lime;
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
