@@ -7,39 +7,8 @@ function PaymentInfo({ formData, setFormData }) {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-
-    console.log(subscriptions, cardOwner, cardType, cardNumber);
-    fetch("http://localhost:3000/api/signup", {
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
-        subscriptions, 
-        cardOwner, 
-        cardType, 
-        cardNumber,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "userRegister");
-        if (data.status == "ok") {
-          alert("Registration Successful");
-        } else {
-          alert("Something went wrong");
-        }
-      });
-  
-    };
   return (
-
     <>
-    <form onSubmit={handleSubmit} method="POST">
       <label for="subscription-select" className="block text-left mt-4">
         Choose a subscription:
       </label>
@@ -117,9 +86,8 @@ function PaymentInfo({ formData, setFormData }) {
         value={formData.cardNumber}
         onChange={handleInputChange}
       />
-      </form>
     </>
-  );}
-
+  );
+}
 
 export default PaymentInfo;
