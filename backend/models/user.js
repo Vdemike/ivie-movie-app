@@ -74,8 +74,8 @@ const userSchema = new mongoose.Schema(
       default: 0,
     },
   },
-  { timestamps: true }
-);
+  { timestamps: true },
+) ;
 
 userSchema
   .virtual("password")
@@ -103,7 +103,7 @@ userSchema.methods = {
     } catch (err) {
       return "";
     }
-  },
+  }, 
 };
 
 module.exports = mongoose.model("User", userSchema);

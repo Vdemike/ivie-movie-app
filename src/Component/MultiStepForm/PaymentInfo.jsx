@@ -6,6 +6,7 @@ function PaymentInfo({ formData, setFormData }) {
     const { name, value } = event.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
+
   return (
     <>
       <label for="subscription-select" className="block text-left mt-4">

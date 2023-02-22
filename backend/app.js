@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
-const axios = require("axios");
+app.set("view engine", "ejs");
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -53,12 +53,6 @@ app.use("/signin", signinRouter);
 app.use("/signout", signoutRouter);
 app.use("/movies", movieRoutes);
 
-signinRouter.use(function (req, res, next) {
-  console.log("Received sign in request");
-  res.json("Welcome to Sign In");
-  next();
-});
-
 signinRouter.post("/", (req, res, next) => {
   const { email, password } = req.body;
 
@@ -82,6 +76,7 @@ signinRouter.post("/", (req, res, next) => {
     //Put token in cookie
     res.cookie("token", token, { expire: new Date() + 1 });
 
+    console.log("User logged in");
     //Send response to front end
     const { _id, name, email } = user;
     return res.json({

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component, useState } from "react";
 import Input from "../Form/Input";
 
 function SignUpInfo({ formData, setFormData }) {
@@ -6,6 +6,7 @@ function SignUpInfo({ formData, setFormData }) {
     const { name, value } = event.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
+
   return (
     <div className="sign-up-container">
       <Input

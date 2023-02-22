@@ -3,40 +3,6 @@ const {validationResult} = require('express-validator')
 var jwt = require('jsonwebtoken')
 var expressJwt = require('express-jwt')
 
-exports.signup = (req, res) => {
-    const errors = validationResult(req)
-
-    if(!errors.isEmpty()) {
-        return res.status(400).json({
-            error: errors.array()[0].msg
-        })
-    }
-
-    const user = new User({
-        email: req.body.email,
-        password: req.body.password,
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        pseudo: req.body.pseudo,
-        birthDate: req.body.birthDate,
-        subscriptions: req.body.subscriptions,
-        cardOwner: req.body.cardOwner,
-        cardType: req.body.cardType,
-        cardNumber: req.body.cardNumber,
-    });
-
-    user
-        .save(user)
-        .then(data => {
-            res.send(data);
-        })
-        .catch(err => {
-            res.status(500).send({
-                message:
-                err.message || "Some error occured while creating the User"
-            });
-        });
-    };
 
 exports.signin = (req, res) => {
     const {email, password} = req.body
@@ -60,7 +26,6 @@ exports.signin = (req, res) => {
 
         //Put token in cookie
         res.cookie('token', token, {expire: new Date() + 1 })
-
         //Send response to front end
         const {_id, name, email} = user
         return res.json({

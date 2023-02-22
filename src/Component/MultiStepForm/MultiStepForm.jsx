@@ -6,7 +6,6 @@ import PaymentInfo from "./PaymentInfo";
 import PrivacyPolicy from "./PrivacyPolicy.jsx";
 import logoblack from "../../assets/logoblack.svg";
 import DataService from "../../services/services";
-import axios from "axios";
 import Password from "./Password";
 
 function MultiStepForm() {
@@ -26,20 +25,13 @@ function MultiStepForm() {
     generalConditions: false,
     dataUse: false,
   });
-
-  useEffect(() => {
-    axios
-      .get("/signUp")
-      .then((response) => setFormData(response.data))
-      .catch((error) => console.error(error));
-  }, []);
+  const [submitted, setsubmitted] = useState(false);
 
   const FormTitles = [
     "Sign up",
     "Private info",
     "General terms of sale",
     "Payment details",
-    "Success",
   ];
 
   const PageDisplay = () => {
@@ -51,55 +43,111 @@ function MultiStepForm() {
       return <PrivacyPolicy formData={formData} setFormData={setFormData} />;
     } else if (page === 3) {
       return <PaymentInfo formData={formData} setFormData={setFormData} />;
-    } else {
-      return <Success />;
+    }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const {
+      email,
+      password,
+      confirmPassword,
+      firstName,
+      lastName,
+      pseudo,
+      birthDate,
+      subscriptions,
+      cardOwner,
+      cardType,
+      cardNumber,
+    } = formData;
+    if (
+      email.length > 0 &&
+      password.length > 0 &&
+      confirmPassword === password &&
+      firstName.length > 0 &&
+      lastName.length > 0 &&
+      pseudo.length > 0 &&
+      birthDate.length > 0 &&
+      subscriptions.length > 0 &&
+      cardOwner.length > 0 &&
+      cardType.length > 0 &&
+      cardNumber.length > 0
+    ) {
+      fetch("http://localhost:3000/api/signup", {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+          confirmPassword,
+          firstName,
+          lastName,
+          pseudo,
+          birthDate,
+          subscriptions,
+          cardOwner,
+          cardType,
+          cardNumber,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data, "userRegister");
+          setsubmitted(true);
+        })
+        .catch((error) => {
+          console.error(error);
+          alert(
+            "An error occurred while submitting the form. Please try again later."
+          );
+        });
     }
   };
 
   return (
     <section>
-      <div className="bg-[#F4E3D7] m-auto rounded-xl w-full p-4 h-full">
-        <img src={logoblack} alt="ivie logo" className="w-1/4 mx-auto my-2" />
-        <div className="w-full text-center">
-          {page === 0
-            ? "1/4"
-            : page == 1
-            ? "2/4"
-            : page == 2
-            ? "3/4"
-            : page == 3
-            ? "4/4"
-            : ""}
-        </div>
-        <div className="container">
-          <div className="text-center">
-            <h1>{FormTitles[page]}</h1>
+      {submitted ? (
+        <Success />
+      ) : (
+        <div className="bg-amber-50 m-auto rounded-xl w-full p-4 h-full">
+          <img src={logoblack} alt="ivie logo" className="w-1/4 mx-auto my-2" />
+          <div className="w-full text-center">
+            {page === 0 ? "1/4" : page == 1 ? "2/4" : page == 2 ? "3/4" : "4/4"}
           </div>
-          <div>{PageDisplay()}</div>
-          <div className="flex justify-center">
-            <Button
-              hide={page === 4 ? true : false}
-              disabled={page === 0 ? true : false}
-              value={"Prev"}
-              clickHandler={() => {
-                setPage((currPage) => currPage - 1);
-              }}
-            />
-            <Button
-              value={page === FormTitles.length - 2 ? "Submit" : "Next"}
-              hide={page === 4 ? true : false}
-              clickHandler={() => {
-                if (page === FormTitles.length - 2) {
-                  setPage((currPage) => currPage + 1);
-                  console.log(formData);
-                } else {
-                  setPage((currPage) => currPage + 1);
-                }
-              }}
-            />
-          </div>
+          <form onSubmit={handleSubmit} method="POST">
+            <div className="text-center">
+              <h1>{FormTitles[page]}</h1>
+            </div>
+            <div>{PageDisplay()}</div>
+            <div className="flex justify-center">
+              <Button
+                disabled={page === 0 ? true : false}
+                value={"Prev"}
+                clickHandler={() => {
+                  setPage((currPage) => currPage - 1);
+                }}
+              />
+              <Button
+                value={page === 3 ? "Submit" : "Next"}
+                type={page === 3 ? "submit" : "button"}
+                clickHandler={() => {
+                  if (page === 3) {
+                    console.log(formData);
+                  } else {
+                    setPage((currPage) => currPage + 1);
+                  }
+                }}
+              />
+            </div>
+          </form>
         </div>
-      </div>
+      )}
     </section>
   );
 }
