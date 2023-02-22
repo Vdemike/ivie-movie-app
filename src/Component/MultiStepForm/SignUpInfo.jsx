@@ -7,38 +7,8 @@ function SignUpInfo({ formData, setFormData }) {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-
-      console.log(firstName, lastName, pseudo, birthDate);
-      fetch("http://localhost:3000/api/signup", {
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify({
-          firstName,
-          pseudo,
-          lastName,
-          birthDate,
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data, "userRegister");
-          if (data.status == "ok") {
-            alert("Registration Successful");
-          } else {
-            alert("Something went wrong");
-          }
-        });
-    
-  };
   return (
     <div className="sign-up-container">
-      <form onSubmit={handleSubmit}>
       <Input
         type="text"
         name="firstName"
@@ -67,7 +37,6 @@ function SignUpInfo({ formData, setFormData }) {
         value={formData.birthDate}
         onChange={handleInputChange}
       />
-      </form>
     </div>
   );
 }
