@@ -6,7 +6,6 @@ import PaymentInfo from "./PaymentInfo";
 import PrivacyPolicy from "./PrivacyPolicy.jsx";
 import logoblack from "../../assets/logoblack.svg";
 import DataService from "../../services/services";
-import axios from "axios";
 import Password from "./Password";
 
 function MultiStepForm() {
@@ -28,12 +27,6 @@ function MultiStepForm() {
   });
 
 
-  useEffect(() => {
-    axios
-      .post("http://localhost:3000/api/signup")
-      .then((response) => setFormData(response.data))
-      .catch((error) => console.error(error));
-  }, []);
 
   const FormTitles = [
     "Sign up",

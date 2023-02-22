@@ -17,7 +17,9 @@ router.post('/signup', [
     body('password').isString().notEmpty(),
     body('email').isString().notEmpty(),
     body('birthDate').isString().notEmpty(),
+
   ], async (req, res) => {
+    console.log(req.body);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
