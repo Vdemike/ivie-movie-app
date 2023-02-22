@@ -34,7 +34,7 @@ function Random() {
             alt={movie.title}
             className="w-[200px] md:w-[250px] md:h-[375px]"
           />
-          <div className="bg-black p-10 md:p-20 self-center text-white">
+          <div className="bg-black p-10 md:p-20 self-center text-[#F4E3D7]">
             <h2 className="font-title text-3xl">Random</h2>
             <p className="pb-10">
               Don't waste more time choosing than watching
@@ -42,7 +42,7 @@ function Random() {
             <Button
               clickHandler={handleRandomMovie}
               value="Generate"
-              class="bg-white hover:bg-transparent text-black font-semibold hover:text-white py-2 px-10 border border-transparent hover:border-white rounded flex justify-center items-center m-auto"
+              class="bg-[#F4E3D7] hover:bg-transparent text-black font-semibold hover:text-[#F4E3D7] py-2 px-10 border border-transparent hover:border-[#F4E3D7] rounded-full flex justify-center items-center m-auto"
             />
           </div>
         </div>

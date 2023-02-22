@@ -3,10 +3,10 @@ export default function Pricing() {
   return (
     <div className="flex flex-col items-center bg-[#F4E3D7] p-4">
       <div className="mb-2 mt-12 text-center">
-        <h1 className="mb-4 text-7xl font-black text-black font-title">
+        <h1 className="mb-4 text-6xl font-black text-black font-title">
           Pricing
         </h1>
-        <p className="text-lg text-black">Everything at a price</p>
+        <p className="text-lg text-black mb-3">Everything at a price</p>
       </div>
       <div id="pricing-cards" className="flex flex-col gap-8 xl:flex-row mb-10">
         <PlanCard
