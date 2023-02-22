@@ -68,7 +68,6 @@ function SignUpInfo({ formData, setFormData }) {
         onChange={handleInputChange}
       />
       </form>
-      
     </div>
   );
 }

@@ -15,13 +15,13 @@ const userSchema = new mongoose.Schema(
       maxlength: 64,
       trim: true,
     },
-    fname: {
+    firstName: {
       type: String,
       required: true,
       maxlength: 32,
       trim: true,
     },
-    lname: {
+    lastName: {
       type: String,
       required: true,
       maxlength: 32,
@@ -74,7 +74,7 @@ const userSchema = new mongoose.Schema(
       default: 0,
     },
   },
-  { timestamps: true }, {collection: "UserInfo", }
+  { timestamps: true },
 ) ;
 
 userSchema

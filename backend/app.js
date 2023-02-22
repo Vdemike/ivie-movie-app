@@ -48,30 +48,35 @@ const userRoutes = require("./routes/user");
 const signinRouter = express.Router();
 const signoutRouter = express.Router();
 
-// Signup
+// // Signup
 
 
-app.post("/api/signup", async (req, res) => {
-  const { firstName, lastName, pseudo, birthDate } = req.body;
+// app.post("http://localhost:3000/api/signup", async (req, res) => {
+//   const { email, password, firstName, lastName, pseudo, birthDate, subscriptions, cardOwner, cardType, cardNumber } = req.body;
 
-  const encryptedPassword = await bcrypt.hash(password, 10);
-  try {
-    const oldUser = await User.findOne({ email });
+//   try {
+//     const oldUser = await User.findOne({ email });
 
-    if (oldUser) {
-      return res.json({ error: "User Exists" });
-    }
-    await User.create({
-      firstname,
-      lastname,
-      pseudo,
-      birthDate,
-    });
-    res.send({ status: "ok" });
-  } catch (error) {
-    res.send({ status: "error" });
-  }
-});
+//     if (oldUser) {
+//       return res.json({ error: "User Exists" });
+//     }
+//     await User.create({
+//       email,
+//       password,
+//       firstName,
+//       lastName,
+//       pseudo,
+//       birthDate,
+//       subscriptions,
+//       cardOwner,
+//       cardType,
+//       cardNumber,
+//     });
+//     res.send({ status: "ok" });
+//   } catch (error) {
+//     res.send({ status: "error" });
+//   }
+// });
 
 // using routes
 app.use("/api", userRoutes); // = localhost:3000/api/signup
