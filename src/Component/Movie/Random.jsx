@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Button from "../Button/Button";
+import OneMovie from "./OneMovie";
 
 function Random() {
   const [movie, setMovie] = useState(null);
   const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   useEffect(() => {
     axios
@@ -24,20 +26,33 @@ function Random() {
     const randomMovie = movies[Math.floor(Math.random() * movies.length)];
     setMovie(randomMovie);
   };
-
+  console.log(selectedMovie);
   return (
     <div className="m-10">
-      {movie ? (
+      {selectedMovie ? (
+        <OneMovie
+          title={selectedMovie.title}
+          onClose={() => setSelectedMovie(null)}
+          overview={selectedMovie.overview}
+          poster={selectedMovie.poster_path}
+          date={selectedMovie.release_date}
+          category={selectedMovie.category}
+          rating={selectedMovie.vote_average}
+        />
+      ) : movie ? (
         <div className="flex justify-center items-center flex-col md:flex-row">
           <div className="relative">
             <img
               src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
               alt={movie.title}
-              className="w-[200px] md:w-[250px] md:h-[375px]"
+              className="w-[200px] md:w-[250px] md:h-[375px] cursor-pointer"
             />
             <div
+              onClick={() => {
+                setSelectedMovie(movie);
+              }}
               className="bg-black/80 absolute bottom-0 text-white h-full w-[200px] md:w-[250px]
-        opacity-0 transition-opacity hover:opacity-100 flex justify-end items-center flex-col text-center"
+        opacity-0 transition-opacity hover:opacity-100 flex justify-end items-center flex-col text-center cursor-pointer"
             >
               <p> {movie.title}</p>
               <p> {movie.release_date.split("-").shift()}</p>

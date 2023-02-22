@@ -1,6 +1,7 @@
 import Button from "../Button/Button";
 
 function OneMovie(props) {
+  console.log(props);
   return (
     <section className="flex justify-center flex-col items-center lg:flex-row-reverse lg:p-10">
       <img
