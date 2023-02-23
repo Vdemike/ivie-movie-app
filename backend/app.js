@@ -10,12 +10,15 @@ var corsOptions = {
   origin: "http://localhost:5173",
 };
 
+
 require("dotenv").config();
 
 const jwt = require("jsonwebtoken");
 const User = require("./models/user");
 const movieRoutes = require("./routes/movies");
 const saveMovies = require("./tmdb");
+
+
 
 //DB connection
 mongoose.connect(
@@ -50,12 +53,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const userRoutes = require("./routes/user");
 const signinRouter = express.Router();
 const signoutRouter = express.Router();
+const pictureRouter = express.Router();
 
 // using routes
 app.use("/api", userRoutes); // = localhost:3000/api/signup
 app.use("/signin", signinRouter);
 app.use("/signout", signoutRouter);
 app.use("/movies", movieRoutes);
+app.use("/profile-picture", pictureRouter);
+
 
 signinRouter.post("/", (req, res, next) => {
   const { email, password } = req.body;
@@ -110,4 +116,26 @@ app.get('/users', (req, res) => {
       res.status(200).send(users);
     }
   });
+});
+
+pictureRouter.put("/", (req, res) => {
+  const userId = req._id;
+  const picture = req.body.picture;
+
+  User.findByIdAndUpdate(
+    userId,
+    { picture: picture },
+    { new: true },
+    (err, user) => {
+      if (err) {
+        return res.status(400).json({
+          error: "Failed to update profile picture",
+        });
+      }
+
+      return res.json({
+        message: "Profile picture updated successfully",
+      });
+    }
+  );
 });

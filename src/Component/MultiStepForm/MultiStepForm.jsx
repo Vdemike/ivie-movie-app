@@ -24,7 +24,7 @@ function MultiStepForm() {
     cardNumber: "",
     generalConditions: false,
     dataUse: false,
-    picture: ".../src/assets/avatar1.svg",
+    picture: "../../assets/avatar1.svg",
   });
   const [submitted, setsubmitted] = useState(false);
 
