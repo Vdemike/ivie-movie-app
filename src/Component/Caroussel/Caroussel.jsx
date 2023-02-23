@@ -16,18 +16,28 @@ function Caroussel() {
   }, []);
 
   return (
-    <section className="slider-container">
-      <div className="slider">
-        <div className="slide-track">
-          {movies.slice(0, 17).map((movie) => (
-            <div
-              key={movie.title}
-              className="slide bg-cover"
-              style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`,
-              }}
-            ></div>
-          ))}
+    <section>
+      <div className="pb-2 pt-12 text-center bg-black">
+        <h1 className="pb-4 text-6xl font-black text-[#F4E3D7] font-title">
+          All the movies you want,
+        </h1>
+        <p className="text-lg text-[#F4E3D7] pb-4">
+          what you really, really want!
+        </p>
+      </div>
+      <div className="slider-container pt-8 pb-8">
+        <div className="slider">
+          <div className="slide-track">
+            {movies.slice(0, 17).map((movie) => (
+              <div
+                key={movie.title}
+                className="slide bg-cover"
+                style={{
+                  backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.poster_path})`,
+                }}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

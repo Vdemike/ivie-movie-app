@@ -31,7 +31,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("DB Connected successfully");
-  saveMovies(1); // Enregistrement des films au démarrage du serveur
+ // saveMovies(1); // Enregistrement des films au démarrage du serveur
 });
 
 // Starting server

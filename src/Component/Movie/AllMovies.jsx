@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 import MovieThumbnail from "./MovieThumbnail";
 import OneMovie from "./OneMovie";
+import Search from "../Search Bar/Search";
+
+
 
 function AllMovies() {
   const [allMovies, setAllMovies] = useState([]);
@@ -26,6 +29,7 @@ function AllMovies() {
   const handleSeeMore = () => {
     setMoviesToShow((prevMoviesToShow) => prevMoviesToShow + 10);
   };
+
 
   const handleCategoryFilter = (category) => {
     setSelectedCategory(category);
@@ -53,6 +57,14 @@ function AllMovies() {
 
   return (
     <section>
+      <h1 class="font-title text-3xl mx-16 mt-16 mb-6 relative w-max two text-justify	uppercase ">
+        All movies
+        <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
+        <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
+      </h1>
+      <p className="text-lg text-black ml-16 pb-8">
+        Take your pick from this vast array of films.
+      </p>
       {selectedMovie ? (
         <OneMovie
           title={selectedMovie.title}
@@ -65,7 +77,7 @@ function AllMovies() {
         />
       ) : (
         <>
-          <div className="flex justify-center items-center flex-wrap space-x-4 mb-4">
+          <div className="flex  flex-wrap mx-2 px-2 mt-6 mb-6 md:mx-8 md:px-8 lg:mx-12 lg:px-12">
             {categories.map((category) => (
               <Button
                 key={category}
@@ -73,12 +85,20 @@ function AllMovies() {
                 value={category}
                 class={
                   selectedCategory === category
-                    ? "bg-black text-white font-semibold py-2 px-4 m-2 rounded"
-                    : "bg-white text-black font-semibold py-2 px-4 m-2 rounded border border-black"
+                    ? "bg-black text-[#F4E3D7] text-sm py-2 px-4 m-2 rounded-full"
+                    : "bg-[#F4E3D7] text-black text-sm py-2 px-4 m-2 rounded-full border border-black"
                 }
               />
             ))}
           </div>
+          <Search handleSearch={(value) => {
+    const filteredMovies = allMovies.filter((movie) =>
+      movie.title.toLowerCase().includes(value.toLowerCase())
+    );
+    setMovies(filteredMovies);
+    setSelectedCategory("All");
+    setSelectedMovie(null);
+  }} />
           <div className="flex flex-wrap justify-center items-center">
             {moviesToDisplay.map((movie) => (
               <MovieThumbnail
@@ -91,11 +111,12 @@ function AllMovies() {
               />
             ))}
           </div>
+
           {moviesToShow < movies.length && (
             <Button
               clickHandler={handleSeeMore}
               value="See more"
-              class="bg-black hover:bg-transparent text-white font-semibold hover:text-black py-2 px-10 border border-transparent hover:border-black rounded flex justify-center items-center m-auto"
+              class="bg-black hover:bg-transparent text-[#F4E3D7] font-semibold hover:text-black py-2 px-10 border border-transparent hover:border-black rounded-full flex justify-center my-8 items-center mx-auto"
             />
           )}
         </>

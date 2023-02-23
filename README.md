@@ -6,7 +6,7 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 ### *The project* : 
 
-[Click here to discover the project iVie](https://iVie.com/)
+[Click here to discover the project iVie](https://iVie.be/)
 
 
 ### *Collaborators* : 
@@ -18,7 +18,7 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 
 ### *Tools* :<br>
- 
+ ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -51,11 +51,21 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 <img width="1440" alt="Capture d’écran 2023-02-17 à 09 24 48" src="https://user-images.githubusercontent.com/119426862/219592031-1a60a71b-d382-4644-8ad6-c1c0fa02a5e8.png">
 <img width="1379" alt="Capture d’écran 2023-02-17 à 09 26 41" src="https://user-images.githubusercontent.com/119426862/219592584-e77a346f-5ff7-40cd-8b20-e417241d7518.png">
 
+## Develop
+
+### Website
+
+1. `npm install`
+2. `npm run dev` starts a local development server that automatically reloads the front-end and scripts.
+3. `npm run build` compiles the project in `dist` folder.
+
+- `npm run pages` deploys the website `dist` folder on GitHub Pages.
+
+### Server
+
+- `cd /server/` to install dependencies
+- Same three steps as Website
+
+&copy; 2023
 
 
-### *Tasks assignment*
-
-- Louise : <br>
-- Chloé : <br>
-- Mike : <br>
-- Greg : <br>

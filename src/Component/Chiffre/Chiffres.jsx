@@ -34,9 +34,9 @@ export default function Chiffres() {
     });
   });
   return (
-    <div className="flex flex-col items-center bg-[#b496c7] p-4">
-      <div className="mb-2 mt-12 text-center">
-        <h1 className="mb-4 text-7xl font-black text-black font-title">
+    <div className="flex flex-col items-center bg-[#b496c7] p-4 pb-8">
+      <div className="mb-6 mt-12 text-center">
+        <h1 className="mb-4 text-6xl font-black text-black font-title">
           Our stats
         </h1>
         <p className="text-lg text-black">
@@ -48,19 +48,24 @@ export default function Chiffres() {
         className="flex flex-col gap-8 m:flex-row m-8 xl:flex-row border-2 border-black rounded-xl"
       >
         <div className="flex flex-col rounded-3xl p-8">
+<<<<<<< HEAD
           <h1 className="mb-4 text-7xl font-black text-black font-title text-center">
             {users.length}
+=======
+          <h1 className="mb-4 text-5xl font-black text-black font-title text-center">
+            20
+>>>>>>> Development
           </h1>
           <p className="text-lg text-black text-center">Accounts</p>
         </div>
         <div className="flex  flex-col rounded-3xl p-8">
-          <h1 className="mb-4 text-7xl font-black text-black font-title text-center">
+          <h1 className="mb-4 text-5xl font-black text-black font-title text-center ">
             {movies.length}
           </h1>
           <p className="text-lg text-black text-center">Movies</p>
         </div>
         <div className="flex  flex-col rounded-3xl p-8">
-          <h1 className="mb-4 text-7xl font-black text-black font-title text-center">
+          <h1 className="mb-4 text-5xl font-black text-black font-title text-center">
             {categories.length}
           </h1>
           <p className="text-lg text-black text-center">Categories</p>
