@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import Search from "../Search Bar/Search";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
