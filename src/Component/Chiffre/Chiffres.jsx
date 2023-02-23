@@ -49,6 +49,7 @@ export default function Chiffres() {
       >
         <div className="flex flex-col rounded-3xl p-8">
           <h1 className="mb-4 text-5xl font-black text-[#F4E3D7] font-title text-center">
+
             {users.length}
           </h1>
           <p className="text-lg text-[#F4E3D7] text-center">Accounts</p>

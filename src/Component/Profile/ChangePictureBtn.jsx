@@ -1,6 +1,4 @@
 import Button from "../Button/Button";
-import cinema from "../../assets/cinema.jpg";
-import logo from "../../assets/logo.svg";
 import avatar1 from "../../assets/avatar1.svg";
 import avatar2 from "../../assets/avatar2.svg";
 import avatar3 from "../../assets/avatar3.svg";
@@ -12,7 +10,7 @@ import avatar8 from "../../assets/avatar8.svg";
 import avatar9 from "../../assets/avatar9.svg";
 import avatar10 from "../../assets/avatar10.svg";
 import React, { useState } from "react";
-//Il faudras change la profile picture dans la db
+
 function ChangePictureBtn(props) {
   const [showDiv, setShowDiv] = useState(false);
 
@@ -22,8 +20,20 @@ function ChangePictureBtn(props) {
 
   const handlePictureClick = (picture) => {
     props.setProfilePicture(picture);
+    localStorage.setItem("pic", picture);
     setShowDiv(false);
-  };
+
+    // Make a request to your backend API to update the user's profile picture
+    fetch('http://localhost:3000/profile-picture', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ picture })
+    })
+
+    .then(data => console.log(data))
+    .catch(error => console.error(error))};
 
   return (
     <>

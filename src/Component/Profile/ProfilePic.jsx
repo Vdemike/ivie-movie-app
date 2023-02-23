@@ -3,21 +3,26 @@ import React from "react";
 
 function ProfilePic(props) {
   return (
-    <section className="flex justify-center items-center m-4 pt-6">
+    <section className={props.class1}>
       <img
-        className="w-[100px] h-[100px] rounded-full"
+        className={props.class2}
         src={props.profilePicture}
         alt="profile picture"
         onClick={() => {
           props.handlePictureClick(avatar1);
         }}
+        id="profile-pic"
       />
     </section>
   );
 }
 
 ProfilePic.defaultProps = {
-  profilePicture: avatar1,
+  profilePicture: localStorage.getItem("pic")
+    ? localStorage.getItem("pic")
+    : avatar1,
+  class1: "flex justify-center items-center m-4 pt-6",
+  class2: "w-[100px] h-[100px] rounded-full",
 };
 
 export default ProfilePic;

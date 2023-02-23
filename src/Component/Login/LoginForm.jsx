@@ -48,6 +48,7 @@ function LoginForm() {
           setIsLoggedIn(true);
           localStorage.setItem("user", JSON.stringify(data));
           navigate("/movies");
+          window.location.reload(true);
         } else {
           setIsNotificationVisible(true);
           setErrorMessage(data.error);

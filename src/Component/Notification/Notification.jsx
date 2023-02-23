@@ -2,15 +2,15 @@ import { React, useEffect } from "react";
 
 function Notification({ isOpen, toggleNotification, children, title }) {
   if (!isOpen) {
-    document.body.classList.remove("modal-open");
+    document.body.classList.remove("notif-open");
     return null;
   }
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add("modal-open");
+      document.body.classList.add("notif-open");
     }
     return () => {
-      document.body.classList.remove("modal-open");
+      document.body.classList.remove("notif-open");
     };
   }, [isOpen]);
   return (

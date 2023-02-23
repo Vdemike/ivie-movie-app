@@ -7,8 +7,23 @@ import PrivacyPolicy from "./PrivacyPolicy.jsx";
 import logoblack from "../../assets/logoblack.svg";
 import DataService from "../../services/services";
 import Password from "./Password";
+import Notification from "../Notification/Notification";
 
 function MultiStepForm() {
+  const [isNotificationVisible, setIsNotificationVisible] = useState(false);
+
+  const toggleNotification = () => {
+    setIsNotificationVisible(
+      (prevIsNotificationVisible) => !prevIsNotificationVisible
+    );
+  };
+  const [isNotificationVisible2, setIsNotificationVisible2] = useState(false);
+
+  const toggleNotification2 = () => {
+    setIsNotificationVisible2(
+      (prevIsNotificationVisible2) => !prevIsNotificationVisible2
+    );
+  };
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
     email: "",
@@ -24,7 +39,7 @@ function MultiStepForm() {
     cardNumber: "",
     generalConditions: false,
     dataUse: false,
-    picture: ".../src/assets/avatar1.svg",
+    picture: "../../assets/avatar1.svg",
   });
   const [submitted, setsubmitted] = useState(false);
 
@@ -110,6 +125,10 @@ function MultiStepForm() {
             "An error occurred while submitting the form. Please try again later."
           );
         });
+    } else {
+      if (page === 3) {
+        setIsNotificationVisible(true);
+      }
     }
   };
 
@@ -151,6 +170,22 @@ function MultiStepForm() {
           </form>
         </div>
       )}
+      <Notification
+        title="Error"
+        isOpen={isNotificationVisible}
+        toggleNotification={toggleNotification}
+      >
+        <p>You must correctly fill all the fields.</p>
+      </Notification>
+      <Notification
+        title="Error"
+        isOpen={isNotificationVisible2}
+        toggleNotification={toggleNotification2}
+      >
+        <p>
+          An error occurred while submitting the form. Please try again later.
+        </p>
+      </Notification>
     </section>
   );
 }
