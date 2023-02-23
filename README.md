@@ -6,7 +6,7 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 ### *The project* : 
 
-[Click here to discover the project iVie](https://iVie.be/)
+[Click here to discover the project iVie](https://github.com/Vdemike/ivie-movie-app)
 
 
 ### *Collaborators* : 
@@ -48,8 +48,14 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 
 ### *Somes pictures*
-<img width="1440" alt="Capture d’écran 2023-02-17 à 09 24 48" src="https://user-images.githubusercontent.com/119426862/219592031-1a60a71b-d382-4644-8ad6-c1c0fa02a5e8.png">
-<img width="1379" alt="Capture d’écran 2023-02-17 à 09 26 41" src="https://user-images.githubusercontent.com/119426862/219592584-e77a346f-5ff7-40cd-8b20-e417241d7518.png">
+![Alt text](/src/assets/scr.landingpage.png "Optional title")
+![Alt text](/src/assets/scr.stats.png "Optional title")
+![Alt text](/src/assets/scr.pricing.png "Optional title")
+![Alt text](/src/assets/scr.form.png "Optional title")
+![Alt text](/src/assets/scr.trends.png "Optional title")
+![Alt text](/src/assets/scr.allmovies.png "Optional title")
+![Alt text](/src/assets/scr.random.png "Optional title")
+
 
 ## Develop
 
