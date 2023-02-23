@@ -48,13 +48,8 @@ export default function Chiffres() {
         className="flex flex-col gap-8 m:flex-row m-8 xl:flex-row border-2 border-black rounded-xl"
       >
         <div className="flex flex-col rounded-3xl p-8">
-<<<<<<< HEAD
-          <h1 className="mb-4 text-7xl font-black text-black font-title text-center">
-            {users.length}
-=======
           <h1 className="mb-4 text-5xl font-black text-black font-title text-center">
-            20
->>>>>>> Development
+            {users.length}
           </h1>
           <p className="text-lg text-black text-center">Accounts</p>
         </div>

@@ -1,6 +1,4 @@
 import Button from "../Button/Button";
-import cinema from "../../assets/cinema.jpg";
-import logo from "../../assets/logo.svg";
 import avatar1 from "../../assets/avatar1.svg";
 import avatar2 from "../../assets/avatar2.svg";
 import avatar3 from "../../assets/avatar3.svg";
@@ -22,6 +20,7 @@ function ChangePictureBtn(props) {
 
   const handlePictureClick = (picture) => {
     props.setProfilePicture(picture);
+    localStorage.setItem("pic", picture);
     setShowDiv(false);
   };
 

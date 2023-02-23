@@ -75,7 +75,7 @@ function carouMovies() {
         Let yourself be tempted by the most popular films.
       </p>
       {}
-      <div className="w-full overflow-x-hidden mb-8">
+      <div className="w-full overflow-x-hidden mb-8 scrollbar-hide overflow-clip">
         {}
         <div className="flex justify-center space-x-4">
           {}

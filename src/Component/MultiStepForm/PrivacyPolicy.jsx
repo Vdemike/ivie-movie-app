@@ -3,7 +3,7 @@ import Dropdown from "../Dropdown/Dropdown";
 
 function PrivacyPolicy({ formData, setFormData }) {
   return (
-    <div className="p-4">
+    <>
       <Dropdown
         title="Privacy policy"
         text={
@@ -167,7 +167,7 @@ function PrivacyPolicy({ formData, setFormData }) {
         />
         <label htmlFor="dataUse"> I agree to the data policy</label>
       </div>
-    </div>
+    </>
   );
 }
 
