@@ -14,22 +14,22 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border-bottom: 2px solid rgb(209 213 219);
-  -webkit-text-fill-color: black;
+  -webkit-text-fill-color: #170f1d;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
-  color: black;
+  color: #170f1d;
 }
 
 .slider-container {
   align-items: center;
-  background: black;
+  background: #170f1d;
   display: flex;
   justify-content: center;
 }
 
 .slider {
-  background: black;
+  background: #170f1d;
   height: 375px;
   margin: auto;
   overflow: hidden;
@@ -41,8 +41,8 @@ select:-webkit-autofill:focus {
 .slider::after {
   background: linear-gradient(
     to right,
-    #000000 0%,
-    rgba(255, 255, 255, 0) 100%
+    #170f1d 0%,
+    rgba(153, 117, 182, 0) 100%
   );
   content: "";
   height: 100%;

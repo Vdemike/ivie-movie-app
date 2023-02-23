@@ -1,8 +1,15 @@
 import React from "react";
-import RedirectButton from "../Button/RedirectButton";
+import RedirectButtonNew from "../Button/RedirectButtonNew";
 function Offer() {
   return (
-    <section className="text-center p-8 md:p-20  text-black">
+    <section className="text-center justify-center p-8 md:p-20  text-[#F4E3D7] bg-[#170f1d] flex flex-col items-center">
+      <video
+        src="./src/assets/Composition 1.mp4"
+        autoPlay
+        loop={true}
+        muted
+        className="w-full h-full object-cover"
+      />
       <p className="mb-6 md:mb-10 md:max-w-[70%] m-auto ">
         Welcome to iVie, the ultimate streaming destination for entertainment
         lovers! <br />
@@ -12,7 +19,12 @@ function Offer() {
         <br />
         <br /> Join iVie today and start streaming your story!
       </p>
-      <RedirectButton name="Sign Up" redirect="/signUp" />
+      <RedirectButtonNew
+        linkTo="/signUp"
+        buttonText="Sign Up!"
+        className=""
+        spanClassName="bg-[#9975B6]"
+      />
     </section>
   );
 }

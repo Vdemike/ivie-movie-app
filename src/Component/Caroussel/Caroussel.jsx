@@ -17,7 +17,7 @@ function Caroussel() {
 
   return (
     <section>
-      <div className="pb-2 pt-12 text-center bg-black">
+      <div className="pb-2 pt-12 text-center bg-[#170f1d]">
         <h1 className="pb-4 text-6xl font-black text-[#F4E3D7] font-title">
           All the movies you want,
         </h1>
@@ -25,7 +25,7 @@ function Caroussel() {
           what you really, really want!
         </p>
       </div>
-      <div className="slider-container pt-8 pb-8">
+      <div className="slider-container pt-8 pb-8 bg-[#170f1d] ">
         <div className="slider">
           <div className="slide-track">
             {movies.slice(0, 17).map((movie) => (

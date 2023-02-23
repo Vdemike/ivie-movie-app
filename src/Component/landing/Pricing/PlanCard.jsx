@@ -1,4 +1,4 @@
-import RedirectButton from "../../Button/RedirectButton";
+import RedirectButtonNew from "../../Button/RedirectButtonNew";
 export default function PlanCard(props) {
   const { name, description, price, features, color } = props;
   return (
@@ -30,10 +30,11 @@ export default function PlanCard(props) {
           </li>
         ))}
       </ul>
-      <RedirectButton
-        name="Choose"
-        redirect="/signUp"
-        className="bg-black m-1 hover:bg-transparent text-[#F4E3D7] font-semibold hover:text-black py-2 px-6 border border-transparent hover:border-black rounded-full text-center"
+      <RedirectButtonNew
+        linkTo="/signUp"
+        buttonText="Choose!"
+        className=""
+        spanClassName="bg-[#170f1d]"
       />
     </div>
   );

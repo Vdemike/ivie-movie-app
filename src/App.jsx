@@ -11,9 +11,8 @@ import DataService from "./services/services";
 import UserProfile from "./pages/userProfile";
 
 function App() {
-  const [color, changeColor] = useState(
-    "linear-gradient(0deg, rgba(175,151,196,1) 0%, rgba(240,224,209,1) 100%)"
-  );
+  const [color, changeColor] = useState("#170f1d");
+
   return (
     <div
       className="min-h-screen m-0 flex flex-col"
