@@ -50,4 +50,27 @@ router.post('/signin', signin)
 
 router.get("/signout", signout)
 
+router.put("/profile-picture",  (req, res) => {
+  const userId = req.user._id;
+  const picture = req.body.picture;
+
+  User.findByIdAndUpdate(
+    userId,
+    { picture: picture },
+    { new: true },
+    (err, user) => {
+      if (err) {
+        return res.status(400).json({
+          error: "Failed to update profile picture",
+        });
+      }
+
+      return res.json({
+        message: "Profile picture updated successfully",
+      });
+    }
+  );
+});
+
+
 module.exports = router;
