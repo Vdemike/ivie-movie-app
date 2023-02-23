@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import avatar1 from "../../assets/avatar1.svg";
 import logo from "../../assets/logo.svg";
-import Search from "../Search Bar/Search";
+import ProfilePic from "../Profile/ProfilePic";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,9 @@ function Navbar() {
       {isLoggedIn ? (
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="" className="flex items-center">
-            <img src={logo} className="h-6 mr-3 sm:h-9" alt="ivie Logo" />
+            <Link to="/movies" className="flex items-center">
+              <img src={logo} className="h-6 mr-3 sm:h-9" alt="ivie Logo" />
+            </Link>
           </a>
           <button
             onClick={toggleMenu}
@@ -56,13 +59,21 @@ function Navbar() {
             }`}
             id="navbar-default"
           >
-            <ul className="bg-black flex flex-col p-4 mt-4 border-black md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="bg-black flex flex-col items-center p-4 mt-4 border-black md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <Link
                   to="/movies"
                   className="block py-2 pl-3 pr-4 text-orange-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-500 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Movies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/profile"
+                  className="block py-2 pl-3 pr-4 text-orange-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-500 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Profile
                 </Link>
               </li>
               <li>
@@ -77,13 +88,31 @@ function Navbar() {
                   Log out
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/profile"
+                  className="block py-2 pl-3 pr-4 text-orange-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-500 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  <ProfilePic
+                    class1="block"
+                    class2="w-[40px] h-[40px] rounded-full"
+                    profilePicture={
+                      localStorage.getItem("pic")
+                        ? localStorage.getItem("pic")
+                        : avatar1
+                    }
+                  />
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       ) : (
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="" className="flex items-center">
-            <img src={logo} className="h-6 mr-3 sm:h-9" alt="ivie Logo" />
+            <Link to="/" className="flex items-center">
+              <img src={logo} className="h-6 mr-3 sm:h-9" alt="ivie Logo" />
+            </Link>
           </a>
           <button
             onClick={toggleMenu}

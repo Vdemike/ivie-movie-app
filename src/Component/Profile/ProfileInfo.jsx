@@ -1,4 +1,4 @@
-import axios, { Axios } from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 function ProfileInfo(props) {
@@ -16,9 +16,9 @@ function ProfileInfo(props) {
   }, []);
 
   const id = JSON.parse(user).user["_id"];
-  console.log(users);
+
   const matchingUser = users.find((user) => user._id === id);
-  console.log(matchingUser, id);
+
   return (
     <section className="flex justify-center flex-col items-center">
       <h3 className="font-title text-2xl p-4">{props.title}</h3>

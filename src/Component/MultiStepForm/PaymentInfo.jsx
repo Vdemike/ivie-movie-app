@@ -36,7 +36,7 @@ function PaymentInfo({ formData, setFormData }) {
 
       <p>Type of payment</p>
       <div className="flex flex-col justify-center items-start p-2 md:flex-row">
-        <div className="p-2">
+        <div className="py-2">
           <input
             type="radio"
             id="credit"

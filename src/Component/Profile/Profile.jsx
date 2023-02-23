@@ -4,15 +4,25 @@ import ChangePictureBtn from "../Profile/ChangePictureBtn";
 import avatar1 from "../../assets/avatar1.svg";
 import ProfileInfo from "../Profile/ProfileInfo";
 function Profile() {
-  const [profilePicture, setProfilePicture] = useState(avatar1);
+  const [profilePicture, setProfilePicture] = useState(
+    localStorage.getItem("pic") ? localStorage.getItem("pic") : avatar1
+  );
 
   return (
     <>
       <ProfilePic
         profilePicture={profilePicture}
-        handlePictureClick={setProfilePicture}
+        handlePictureClick={(newPicture) => {
+          setProfilePicture(newPicture);
+        }}
+        class1="flex justify-center items-center m-4 pt-6"
+        class2="w-[100px] h-[100px] rounded-full"
       />
-      <ChangePictureBtn setProfilePicture={setProfilePicture} />
+      <ChangePictureBtn
+        setProfilePicture={(newPicture) => {
+          setProfilePicture(newPicture);
+        }}
+      />
       <main className="pb-10">
         <ProfileInfo
           title="My account"
