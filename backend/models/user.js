@@ -63,7 +63,12 @@ const userSchema = new mongoose.Schema(
       maxlength: 32,
       trim: true,
     },
-
+    picture: {
+      type: String,
+      required: true,
+      maxlength: 64,
+      trim: true,
+    },
     verification_code: {
       type: Number,
       default: null,
