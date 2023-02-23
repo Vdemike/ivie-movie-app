@@ -30,7 +30,6 @@ function Random() {
   return (
     <div className="my-24">
       {movie ? (
-=======
     <div className="m-10">
       {selectedMovie ? (
         <OneMovie

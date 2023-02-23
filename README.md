@@ -6,7 +6,7 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 ### *The project* : 
 
-[Click here to discover the project iVie](https://iVie.com/)
+[Click here to discover the project iVie](https://iVie.be/)
 
 
 ### *Collaborators* : 
@@ -68,9 +68,4 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 &copy; 2023
 
-### *Tasks assignment*
 
-- Louise : <br>
-- Chloé : <br>
-- Mike : <br>
-- Greg : <br>
