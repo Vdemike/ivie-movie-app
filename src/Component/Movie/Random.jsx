@@ -26,7 +26,7 @@ function Random() {
     const randomMovie = movies[Math.floor(Math.random() * movies.length)];
     setMovie(randomMovie);
   };
-  console.log(selectedMovie);
+
   return (
     <div className="m-10">
       {selectedMovie ? (
@@ -71,8 +71,8 @@ function Random() {
           </div>
         </div>
       ) : (
-        <div className="w-full h-screen flex justify-center items-center bg-black/80 z-10">
-          <div className="w-[64px] h-[64px] rounded-full border-y-2 animate-spin"></div>
+        <div className="w-full h-screen flex justify-center items-center z-10">
+          <div className="w-[64px] h-[64px] rounded-full border-y-4 animate-spin"></div>
         </div>
       )}
     </div>
