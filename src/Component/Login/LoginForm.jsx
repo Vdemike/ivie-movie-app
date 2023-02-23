@@ -60,10 +60,7 @@ function LoginForm() {
               <Button
                 value="Login"
                 type="submit"
-                clickHandler={() => {
-                  console.log(loginFormData);
-                  handleSubmit();
-                }}
+                clickHandler={() => console.log(loginFormData)}
               />
             </div>
           </form>
