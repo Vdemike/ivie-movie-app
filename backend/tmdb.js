@@ -7,6 +7,7 @@ const api_key = 'd37d3e4ad93eaefbc2c174c17d90eb9d';
 
 const max_page = 50;
 
+
 const saveMovies = (page) => {
   if (page > max_page) {
     console.log(`Saved ${max_page * 20} movies in total.`);
@@ -50,5 +51,4 @@ const saveMovies = (page) => {
 
 module.exports = saveMovies;
 
-module.exports = saveMovies;
 

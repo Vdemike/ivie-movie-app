@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 import MovieThumbnail from "./MovieThumbnail";
 import OneMovie from "./OneMovie";
+import Search from "../Search Bar/Search";
+
+
 
 function AllMovies() {
   const [allMovies, setAllMovies] = useState([]);
@@ -26,6 +29,7 @@ function AllMovies() {
   const handleSeeMore = () => {
     setMoviesToShow((prevMoviesToShow) => prevMoviesToShow + 10);
   };
+
 
   const handleCategoryFilter = (category) => {
     setSelectedCategory(category);
@@ -87,6 +91,14 @@ function AllMovies() {
               />
             ))}
           </div>
+          <Search handleSearch={(value) => {
+    const filteredMovies = allMovies.filter((movie) =>
+      movie.title.toLowerCase().includes(value.toLowerCase())
+    );
+    setMovies(filteredMovies);
+    setSelectedCategory("All");
+    setSelectedMovie(null);
+  }} />
           <div className="flex flex-wrap justify-center items-center">
             {moviesToDisplay.map((movie) => (
               <MovieThumbnail
@@ -99,6 +111,7 @@ function AllMovies() {
               />
             ))}
           </div>
+
           {moviesToShow < movies.length && (
             <Button
               clickHandler={handleSeeMore}

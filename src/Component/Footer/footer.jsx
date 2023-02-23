@@ -52,7 +52,7 @@ function Footer() {
                 <div className="flex flex-cols-4 gap-4 place-content-center">
                   <div>
                     <svg
-                      class="w-5 h-5 fill-current"
+                      className="w-5 h-5 fill-current"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ function Footer() {
 
                   <div>
                     <svg
-                      class="h-6 w-6 fill-current text-[#F4E3D7]"
+                      className="h-6 w-6 fill-current text-[#F4E3D7]"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
                     >
@@ -72,7 +72,7 @@ function Footer() {
                   </div>
                   <div>
                     <svg
-                      class="w-5 h-5 fill-current"
+                      className="w-5 h-5 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
                     >
@@ -81,7 +81,7 @@ function Footer() {
                   </div>
                   <div>
                     <svg
-                      class="w-5 h-5 fill-current"
+                      className="w-5 h-5 fill-current"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"

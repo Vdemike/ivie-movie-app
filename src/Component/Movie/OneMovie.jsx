@@ -1,6 +1,7 @@
 import Button from "../Button/Button";
 
 function OneMovie(props) {
+  console.log(props);
   return (
     <section className="flex justify-center flex-col items-center lg:flex-row-reverse lg:p-10">
       <img
@@ -13,14 +14,17 @@ function OneMovie(props) {
           Release date: {props.date.substr(8, 2)}/{props.date.substr(5, 2)}/
           {props.date.substr(0, 4)}
         </p>
-        <p className="flex flex-wrap items-center py-2">
+        <div className="flex flex-wrap items-center py-2">
           Categories:
           {props.category.map((categories) => (
-            <p className="inline bg-purple-500 text-white rounded-lg p-1 m-1">
+            <p
+              key={categories}
+              className="inline bg-purple-500 text-white rounded-lg p-1 m-1"
+            >
               {categories}
             </p>
           ))}
-        </p>
+        </div>
         <p className="py-2">Rating: {props.rating}</p>
         <p className="py-4 pb-8">{props.overview}</p>
         <Button

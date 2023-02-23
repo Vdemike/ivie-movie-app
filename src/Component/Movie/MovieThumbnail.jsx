@@ -10,6 +10,9 @@ function MovieThumbnail(props) {
         <div
           className="bg-black/80 absolute bottom-0 text-[#F4E3D7] w-[300px] h-full md:w-[200px]
           opacity-0 transition-opacity hover:opacity-100 flex justify-end items-center flex-col p-4 text-center"
+=======
+          className="bg-black/80 absolute bottom-0 text-white h-full md:w-[200px]
+        opacity-0 transition-opacity hover:opacity-100 flex justify-end items-center flex-col text-center cursor-pointer p-4"
         >
           <p> {props.title}</p>
           <p> {props.date.split("-").shift()}</p>
