@@ -25,7 +25,8 @@ exports.signin = (req, res) => {
         const token = jwt.sign({_id: user._id}, process.env.SECRET)
 
         //Put token in cookie
-        res.cookie('token', token, {expire: new Date() + 1 })
+        res.cookie('token', token, {expire: new Date() + 1 }) 
+
         //Send response to front end
         const {_id, name, email} = user
         return res.json({
