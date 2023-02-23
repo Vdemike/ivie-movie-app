@@ -28,6 +28,9 @@ function Random() {
   };
 
   return (
+    <div className="my-24">
+      {movie ? (
+=======
     <div className="m-10">
       {selectedMovie ? (
         <OneMovie
@@ -59,14 +62,18 @@ function Random() {
             </div>
           </div>
           <div className="bg-black p-10 md:p-20 self-center text-white">
-            <h2 className="font-title text-3xl">Random</h2>
+            <h1 class="font-title text-3xl relative w-max mb-4 two text-justify ">
+              Random
+              <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
+              <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
+            </h1>
             <p className="pb-10">
               Don't waste more time choosing than watching
             </p>
             <Button
               clickHandler={handleRandomMovie}
               value="Generate"
-              class="bg-white hover:bg-transparent text-black font-semibold hover:text-white py-2 px-10 border border-transparent hover:border-white rounded flex justify-center items-center m-auto"
+              class="bg-[#F4E3D7] hover:bg-transparent text-black font-semibold hover:text-[#F4E3D7] py-2 px-10 border border-transparent hover:border-[#F4E3D7] rounded-full flex justify-center items-center m-auto"
             />
           </div>
         </div>

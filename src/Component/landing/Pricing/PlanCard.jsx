@@ -4,16 +4,16 @@ export default function PlanCard(props) {
   return (
     <div
       style={{ backgroundColor: color }}
-      className="flex min-h-[428px] w-[320px] flex-col rounded-3xl p-8"
+      className="flex min-h-[428px] w-[320px] flex-col  p-8"
     >
       <h2 className="mb-5 text-xl font-medium ">{name}</h2>
-      <div className="mb-5 flex items-end text-6xl font-black font-title">
+      <div className="mb-5 flex items-end text-5xl font-black font-title">
         {price}
       </div>
-      <p className="md-5">{description}</p>
+      <p className="md-5 mb-5">{description}</p>
       <ul className="mb-10 flex flex-col gap-y-2">
         {features.map((feature, index) => (
-          <li key={index} className="flex itens-center">
+          <li key={index} className="flex itens-center mb-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -33,7 +33,7 @@ export default function PlanCard(props) {
       <RedirectButton
         name="Choose"
         redirect="/signUp"
-        className="bg-black m-1 hover:bg-transparent text-[#F4E3D7] font-semibold hover:text-black py-2 px-6 border border-transparent hover:border-black rounded text-center"
+        className="bg-black m-1 hover:bg-transparent text-[#F4E3D7] font-semibold hover:text-black py-2 px-6 border border-transparent hover:border-black rounded-full text-center"
       />
     </div>
   );

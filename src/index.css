@@ -97,3 +97,15 @@ select:-webkit-autofill:focus {
 body.modal-open {
   overflow: hidden;
 }
+
+.one:hover span:last-child {
+  width: 100%;
+}
+
+.two:hover span {
+  width: 50%;
+}
+
+.three:hover span {
+  height: 100%;
+}
