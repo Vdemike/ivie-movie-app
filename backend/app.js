@@ -18,8 +18,6 @@ const movieRoutes = require("./routes/movies");
 const saveMovies = require("./tmdb");
 
 //DB connection
-
-//DB connection
 mongoose.connect(
   `mongodb+srv://ivie:Becode@cluster0.rayo4nz.mongodb.net/Users?retryWrites=true&w=majority`,
   {
@@ -34,6 +32,12 @@ db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("DB Connected successfully");
   saveMovies(1); // Enregistrement des films au démarrage du serveur
+});
+
+// Starting server
+const port = 3000;
+app.listen(port, () => {
+  console.log(`App is running at ${port}`);
 });
 
 // Use parsing middleware
@@ -95,13 +99,14 @@ signoutRouter.get("/", (req, res, next) => {
   return res.json({ message: "User signed out successfully" });
 });
 
-// Starting server
-const port = 3000;
-app.listen(port, () => {
-  console.log(`App is running at ${port}`);
-});
-
-app.post("/save-movies", (req, res) => {
-  saveMovies(1); // Lance l'enregistrement des films
-  res.send("Enregistrement des films lancé");
+// Récuperer les infos des users enregistrés
+app.get('/users', (req, res) => {
+  User.find((err, users) => {
+    if (err) {
+      console.log('Error getting users from MongoDB', err);
+      res.status(500).send('Error getting users from MongoDB');
+    } else {
+      res.status(200).send(users);
+    }
+  });
 });
