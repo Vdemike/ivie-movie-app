@@ -82,13 +82,14 @@ signinRouter.post("/", (req, res, next) => {
 
     console.log("User logged in");
     //Send response to front end
-    const { _id, name, email } = user;
+    const { _id, name, email, picture } = user;
     return res.json({
       token,
       user: {
         _id,
         name,
         email,
+        picture,
       },
     });
   });

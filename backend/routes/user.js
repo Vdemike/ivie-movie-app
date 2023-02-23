@@ -25,7 +25,7 @@ router.post('/signup', [
       return res.status(400).json({ errors: errors.array() });
     }
   
-    const { firstName, lastName, pseudo, subscriptions, cardOwner, cardType, cardNumber, password, email, birthDate } = req.body;
+    const { firstName, lastName, pseudo, subscriptions, cardOwner, cardType, cardNumber, password, email, birthDate, picture } = req.body;
   
     try {
       // Check if user with the given pseudo already exists
@@ -35,7 +35,7 @@ router.post('/signup', [
       }
   
       // Create a new user with the given data
-      const newUser = new User({ firstName, lastName, pseudo, subscriptions, cardOwner, cardType, cardNumber, password, email, birthDate });
+      const newUser = new User({ firstName, lastName, pseudo, subscriptions, cardOwner, cardType, cardNumber, password, email, birthDate, picture });
       await newUser.save();
   
       res.status(201).json({ message: 'User created successfully' });
