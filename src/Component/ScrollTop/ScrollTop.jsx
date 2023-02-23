@@ -18,7 +18,7 @@ const ScrollToTop = () => {
     });
   };
   return (
-    <div className="fixed bottom-0 right-0 p-1 md:p-4">
+    <div className="fixed bottom-0 right-0 p-1 md:p-4 cursor-pointer">
       {" "}
       {showTopBtn && (
         <svg

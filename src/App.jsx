@@ -14,6 +14,7 @@ function App() {
   const [color, changeColor] = useState(
     "linear-gradient(0deg, rgba(175,151,196,1) 0%, rgba(240,224,209,1) 100%)"
   );
+
   return (
     <div
       className="min-h-screen m-0 flex flex-col"
