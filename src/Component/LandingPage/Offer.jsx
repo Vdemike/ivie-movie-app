@@ -4,11 +4,11 @@ function Offer() {
   return (
     <section className="text-center justify-center p-8 md:p-20  text-[#F4E3D7] bg-[#170f1d] flex flex-col items-center">
       <video
-        src="./src/assets/Composition 1.mp4"
+        src="./src/assets/Composition 1_5.mp4"
         autoPlay
         loop={true}
         muted
-        className="w-full h-full object-cover"
+        className="w-1/2 h-full object-cover"
       />
       <p className="mb-6 md:mb-10 md:max-w-[70%] m-auto ">
         Welcome to iVie, the ultimate streaming destination for entertainment

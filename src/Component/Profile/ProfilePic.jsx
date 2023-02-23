@@ -3,7 +3,7 @@ import React from "react";
 
 function ProfilePic(props) {
   return (
-    <section className="flex justify-center items-center m-4 ">
+    <section className="flex justify-center items-center m-4 pt-6">
       <img
         className="w-[100px] h-[100px] rounded-full"
         src={props.profilePicture}

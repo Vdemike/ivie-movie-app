@@ -6,7 +6,7 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 ### *The project* : 
 
-[Click here to discover the project iVie](https://iVie.com/)
+[Click here to discover the project iVie](https://github.com/Vdemike/ivie-movie-app)
 
 
 ### *Collaborators* : 
@@ -18,17 +18,17 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 
 ### *Tools* :<br>
- 
+ ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 - The Movie Database API
-- Déploiement?
 
 
 ---
+
 ### *Achievements* 
 
 - Create a React/Node.js streaming web-app.
@@ -38,7 +38,6 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 - Include a search bar and sort by filters
 - Make a secure code
 - Make it responsive
-- Back office 
 - Manage our onw database system with mongoDB
 - Create a movie page with the info of the selected movie and its trailer
 - Deploy the site
@@ -48,14 +47,58 @@ Project carried out during BeCode's training. Creation of a platform inspired by
 
 
 ### *Somes pictures*
-<img width="1440" alt="Capture d’écran 2023-02-17 à 09 24 48" src="https://user-images.githubusercontent.com/119426862/219592031-1a60a71b-d382-4644-8ad6-c1c0fa02a5e8.png">
-<img width="1379" alt="Capture d’écran 2023-02-17 à 09 26 41" src="https://user-images.githubusercontent.com/119426862/219592584-e77a346f-5ff7-40cd-8b20-e417241d7518.png">
+![Alt text](/src/assets/scr.landingpage.png "Optional title")
+![Alt text](/src/assets/scr.stats.png "Optional title")
+![Alt text](/src/assets/scr.pricing.png "Optional title")
+![Alt text](/src/assets/scr.form.png "Optional title")
+![Alt text](/src/assets/scr.trends.png "Optional title")
+![Alt text](/src/assets/scr.allmovies.png "Optional title")
+![Alt text](/src/assets/scr.random.png "Optional title")
+
+<br><br>
+
+# Develop
 
 
+## Getting Started with Create React App
 
-### *Tasks assignment*
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Louise : <br>
-- Chloé : <br>
-- Mike : <br>
-- Greg : <br>
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+

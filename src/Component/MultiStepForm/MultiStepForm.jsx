@@ -24,6 +24,7 @@ function MultiStepForm() {
     cardNumber: "",
     generalConditions: false,
     dataUse: false,
+    picture: ".../src/assets/avatar1.svg",
   });
   const [submitted, setsubmitted] = useState(false);
 
@@ -60,6 +61,7 @@ function MultiStepForm() {
       cardOwner,
       cardType,
       cardNumber,
+      picture,
     } = formData;
     if (
       email.length > 0 &&
@@ -94,6 +96,7 @@ function MultiStepForm() {
           cardOwner,
           cardType,
           cardNumber,
+          picture,
         }),
       })
         .then((res) => res.json())

@@ -80,7 +80,8 @@ function Random() {
         </div>
       )}
     </div>
-  );
+    );
 }
+
 
 export default Random;

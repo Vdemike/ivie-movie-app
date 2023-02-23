@@ -74,20 +74,21 @@ function AllMovies() {
         />
       ) : (
         <>
-          <div className="flex  flex-wrap mx-2 px-2 mt-6 mb-6 md:mx-8 md:px-8 lg:mx-12 lg:px-12">
+          <div className=" text-[#F4E3D7] flex flex-wrap mx-2 px-2 mt-6 mb-6 md:mx-8 md:px-8 lg:mx-12 lg:px-12">
             {categories.map((category) => (
-              <Button
+              <button
                 key={category}
-                clickHandler={() => handleCategoryFilter(category)}
-                value={category}
-                class={
-                  selectedCategory === category
-                    ? "bg-black text-[#F4E3D7] text-sm py-2 px-4 m-2 rounded-full"
-                    : "bg-[#F4E3D7] text-black text-sm py-2 px-4 m-2 rounded-full border border-black"
-                }
-              />
+                className="text-l relative w-max three mx-6 rounded-full text-[#F4E3D7] font-bold text-sm py-2 px-4 m-2 border-none transition-all hover:bg-opacity-75 "
+                onClick={() => handleCategoryFilter(category)}
+              >
+                <span className="px-1">{category}</span>
+                {selectedCategory === category && (
+                  <span className="absolute left-0 -bottom-1 w-full h-1 transition-all bg-[#9975B6]"></span>
+                )}
+              </button>
             ))}
           </div>
+
           <Search
             handleSearch={(value) => {
               const filteredMovies = allMovies.filter((movie) =>
