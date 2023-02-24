@@ -34,36 +34,37 @@ export default function Chiffres() {
     });
   });
   return (
-    <div className="flex flex-col items-center bg-[#b496c7] p-4 pb-8">
+    <div className="flex flex-col items-center bg-[#170f1d] p-4 pb-8">
       <div className="mb-6 mt-12 text-center">
-        <h1 className="mb-4 text-6xl font-black text-black font-title">
+        <h1 className="mb-4 text-6xl font-black text-[#F4E3D7] font-title">
           Our stats
         </h1>
-        <p className="text-lg text-black">
+        <p className="text-lg text-[#F4E3D7]">
           let the numbers speak for themselves
         </p>
       </div>
       <div
         id="pricing-cards"
-        className="flex flex-col gap-8 m:flex-row m-8 xl:flex-row border-2 border-black rounded-xl"
+        className="flex flex-col gap-8 m:flex-row m-8 xl:flex-row border-2 border-[#F4E3D7] rounded-xl"
       >
         <div className="flex flex-col rounded-3xl p-8">
-          <h1 className="mb-4 text-5xl font-black text-black font-title text-center">
+          <h1 className="mb-4 text-5xl font-black text-[#F4E3D7] font-title text-center">
+
             {users.length}
           </h1>
-          <p className="text-lg text-black text-center">Accounts</p>
+          <p className="text-lg text-[#F4E3D7] text-center">Accounts</p>
         </div>
         <div className="flex  flex-col rounded-3xl p-8">
-          <h1 className="mb-4 text-5xl font-black text-black font-title text-center ">
+          <h1 className="mb-4 text-5xl font-black text-[#F4E3D7] font-title text-center ">
             {movies.length}
           </h1>
-          <p className="text-lg text-black text-center">Movies</p>
+          <p className="text-lg text-[#F4E3D7] text-center">Movies</p>
         </div>
         <div className="flex  flex-col rounded-3xl p-8">
-          <h1 className="mb-4 text-5xl font-black text-black font-title text-center">
+          <h1 className="mb-4 text-5xl font-black text-[#F4E3D7] font-title text-center">
             {categories.length}
           </h1>
-          <p className="text-lg text-black text-center">Categories</p>
+          <p className="text-lg text-[#F4E3D7] text-center">Categories</p>
         </div>
       </div>
     </div>

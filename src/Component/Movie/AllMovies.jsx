@@ -5,8 +5,6 @@ import MovieThumbnail from "./MovieThumbnail";
 import OneMovie from "./OneMovie";
 import Search from "../Search Bar/Search";
 
-
-
 function AllMovies() {
   const [allMovies, setAllMovies] = useState([]);
   const [movies, setMovies] = useState([]);
@@ -29,7 +27,6 @@ function AllMovies() {
   const handleSeeMore = () => {
     setMoviesToShow((prevMoviesToShow) => prevMoviesToShow + 10);
   };
-
 
   const handleCategoryFilter = (category) => {
     setSelectedCategory(category);
@@ -57,12 +54,12 @@ function AllMovies() {
 
   return (
     <section>
-      <h1 class="font-title text-3xl mx-16 mt-16 mb-6 relative w-max two text-justify	uppercase ">
+      <h1 class="font-title text-3xl text-[#F4E3D7] mx-16 mt-16 mb-6 relative w-max two text-justify	uppercase ">
         All movies
         <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
         <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
       </h1>
-      <p className="text-lg text-black ml-16 pb-8">
+      <p className="text-lg text-[#F4E3D7] ml-16 pb-8">
         Take your pick from this vast array of films.
       </p>
       {selectedMovie ? (
@@ -77,28 +74,31 @@ function AllMovies() {
         />
       ) : (
         <>
-          <div className="flex  flex-wrap mx-2 px-2 mt-6 mb-6 md:mx-8 md:px-8 lg:mx-12 lg:px-12">
+          <div className=" text-[#F4E3D7] flex flex-wrap mx-2 px-2 mt-6 mb-6 md:mx-8 md:px-8 lg:mx-12 lg:px-12">
             {categories.map((category) => (
-              <Button
+              <button
                 key={category}
-                clickHandler={() => handleCategoryFilter(category)}
-                value={category}
-                class={
-                  selectedCategory === category
-                    ? "bg-black text-[#F4E3D7] text-sm py-2 px-4 m-2 rounded-full"
-                    : "bg-[#F4E3D7] text-black text-sm py-2 px-4 m-2 rounded-full border border-black"
-                }
-              />
+                className="text-l relative w-max three mx-6 rounded-full text-[#F4E3D7] font-bold text-sm py-2 px-4 m-2 border-none transition-all hover:bg-opacity-75 "
+                onClick={() => handleCategoryFilter(category)}
+              >
+                <span className="px-1">{category}</span>
+                {selectedCategory === category && (
+                  <span className="absolute left-0 -bottom-1 w-full h-1 transition-all bg-[#9975B6]"></span>
+                )}
+              </button>
             ))}
           </div>
-          <Search handleSearch={(value) => {
-    const filteredMovies = allMovies.filter((movie) =>
-      movie.title.toLowerCase().includes(value.toLowerCase())
-    );
-    setMovies(filteredMovies);
-    setSelectedCategory("All");
-    setSelectedMovie(null);
-  }} />
+
+          <Search
+            handleSearch={(value) => {
+              const filteredMovies = allMovies.filter((movie) =>
+                movie.title.toLowerCase().includes(value.toLowerCase())
+              );
+              setMovies(filteredMovies);
+              setSelectedCategory("All");
+              setSelectedMovie(null);
+            }}
+          />
           <div className="flex flex-wrap justify-center items-center">
             {moviesToDisplay.map((movie) => (
               <MovieThumbnail
@@ -116,7 +116,7 @@ function AllMovies() {
             <Button
               clickHandler={handleSeeMore}
               value="See more"
-              class="bg-black hover:bg-transparent text-[#F4E3D7] font-semibold hover:text-black py-2 px-10 border border-transparent hover:border-black rounded-full flex justify-center my-8 items-center mx-auto"
+              class="bg-[#9975B6] hover:bg-transparent text-[#170f1d] font-semibold hover:text-[#9975B6] py-2 px-10 border border-transparent hover:border-[#9975B6] rounded-full flex justify-center my-8 items-center mx-auto"
             />
           )}
         </>

@@ -15,7 +15,7 @@ function Search(props) {
         placeholder="Search movies"
         value={searchTerm}
         onChange={handleSearch}
-        className="border border-gray-300 p-2 rounded-md w-50"
+        className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
       />
     </div>
   );

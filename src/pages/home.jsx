@@ -10,8 +10,8 @@ function Home() {
   return (
     <>
       <Hero />
-      <Chiffres />
       <Caroussel />
+      <Chiffres />
       <Offer />
       <Pricing />
     </>

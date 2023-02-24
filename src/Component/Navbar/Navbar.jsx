@@ -148,7 +148,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/SignUp"
-                  className="block py-2 pl-3 pr-4 text-orange-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-500 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-[#F4E3D7] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#9975B6] md:p-0  "
                 >
                   Sign Up
                 </Link>
@@ -156,7 +156,7 @@ function Navbar() {
               <li>
                 <Link
                   to="/login"
-                  className="block py-2 pl-3 pr-4 text-orange-200 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-purple-500 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-[#F4E3D7] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#9975B6] md:p-0"
                 >
                   Login
                 </Link>

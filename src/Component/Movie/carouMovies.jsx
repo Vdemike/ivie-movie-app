@@ -66,12 +66,12 @@ function carouMovies() {
   };
   return (
     <section className="flex flex-col ">
-      <h1 class="font-title text-3xl mx-16 mt-16 mb-6 relative w-max two text-justify	uppercase ">
+      <h1 class="font-title text-[#F4E3D7] text-3xl mx-16 mt-16 mb-6 relative w-max two text-justify	uppercase ">
         The trends
         <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
         <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
       </h1>
-      <p className="text-lg text-black pl-16 pb-16">
+      <p className="text-lg text-[#F4E3D7] pl-16 pb-16">
         Let yourself be tempted by the most popular films.
       </p>
       {}
@@ -107,10 +107,10 @@ function carouMovies() {
           class="relative top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           data-carousel-prev
         >
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#F4E3D7]/30  group-hover:bg-[#F4E3D7]/50  group-focus:ring-4 group-focus:ring-[#F4E3D7]  group-focus:outline-none">
             <svg
               aria-hidden="true"
-              class="w-6 h-6 text-black dark:text-gray-800"
+              class="w-6 h-6 text-[#F4E3D7] dark:text-gray-800"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -132,10 +132,10 @@ function carouMovies() {
           class="relative top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           data-carousel-next
         >
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#F4E3D7]/30  group-hover:bg-[#F4E3D7]/50  group-focus:ring-4 group-focus:ring-[#F4E3D7]  group-focus:outline-none">
             <svg
               aria-hidden="true"
-              class="w-6 h-6 text-black dark:text-gray-800"
+              class="w-6 h-6 text-[#F4E3D7] "
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

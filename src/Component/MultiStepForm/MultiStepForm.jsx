@@ -137,7 +137,7 @@ function MultiStepForm() {
       {submitted ? (
         <Success />
       ) : (
-        <div className="bg-amber-50 m-auto rounded-xl w-full p-4 h-full">
+        <div className="bg-[#F4E3D7] m-auto rounded-xl w-full p-4 h-full">
           <img src={logoblack} alt="ivie logo" className="w-1/4 mx-auto my-2" />
           <div className="w-full text-center">
             {page === 0 ? "1/4" : page == 1 ? "2/4" : page == 2 ? "3/4" : "4/4"}

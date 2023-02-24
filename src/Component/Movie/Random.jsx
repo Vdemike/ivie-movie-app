@@ -58,7 +58,7 @@ function Random() {
               <p> {movie.release_date.split("-").shift()}</p>
             </div>
           </div>
-          <div className="bg-black p-10 md:p-20 self-center text-white">
+          <div className="bg-[#F4E3D7] p-10 md:p-20 self-center text-[#170f1d]">
             <h1 class="font-title text-3xl relative w-max mb-4 two text-justify ">
               Random
               <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#b496c7]"></span>
@@ -70,7 +70,7 @@ function Random() {
             <Button
               clickHandler={handleRandomMovie}
               value="Generate"
-              class="bg-[#F4E3D7] hover:bg-transparent text-black font-semibold hover:text-[#F4E3D7] py-2 px-10 border border-transparent hover:border-[#F4E3D7] rounded-full flex justify-center items-center m-auto"
+              class="bg-[#170f1d] hover:bg-transparent text-[#F4E3D7] font-semibold hover:text-[#170f1d] py-2 px-10 border border-transparent hover:border-[#170f1d] rounded-full flex justify-center items-center m-auto"
             />
           </div>
         </div>

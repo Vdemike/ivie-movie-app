@@ -58,7 +58,7 @@ function LoginForm() {
 
   return (
     <section className="p-4">
-      <div className="bg-amber-50 rounded-xl w-full p-4 flex flex-col justify-center">
+      <div className="bg-[#F4E3D7] rounded-xl w-full p-4 flex flex-col justify-center">
         <img src={logoblack} alt="ivie logo" className="w-1/4 mx-auto my-2" />
         <div className="form-container">
           <form onSubmit={handleSubmit}>
